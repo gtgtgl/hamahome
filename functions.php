@@ -182,5 +182,3 @@ require get_template_directory() . '/inc/custom_post_type.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
-
-// test

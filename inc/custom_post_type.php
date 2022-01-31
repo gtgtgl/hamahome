@@ -308,6 +308,3 @@ function hamahome_admin_custom_posttype_order($wp_query) {
 	}
   }
   add_filter('pre_get_posts', 'hamahome_admin_custom_posttype_order');
-
-?>
-
