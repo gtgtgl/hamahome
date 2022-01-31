@@ -210,7 +210,6 @@ function custom_post_example() {
 		)
 	);
 
-
 ////////////////////////////////////////////////////////////////////
 //カスタムフィールドの見た目（入力欄等）を追加する
 // 参考：https://suzulang.com/wordpress-custom-field-addmetabox/
