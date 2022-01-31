@@ -1,0 +1,140 @@
+/* -----------------------------------
+フッター
+----------------------------------- */
+
+footer.site-footer {
+    padding: 0;
+    
+    @include mq(md) {
+        padding: 60px 0 0;
+    }
+
+    .site-info {
+        display: none;
+
+        .flex > div.col-xl2 {
+            padding: 0 5px;
+
+            @media (min-width: 1240px) {
+                width: calc((100% * 1.6) / 12);
+            }
+        }
+
+        .flex > div.col-xl3 {
+            padding: 0 5px;
+
+            @media (min-width: 1240px) {
+                width: calc((100% * 2) / 12);
+            }
+        }
+
+        .flex > div.col-xl4 {
+            padding: 0 15px 0 0;
+
+            @media (min-width: 1240px) {
+                width: calc((100% * 3.2) / 12);
+            }
+        }
+
+        @include mq(md) {
+            display: block;
+        }
+
+        div.menu_company {
+            margin: 0;
+            padding: 0;
+
+            p {
+                font-size: 13px;
+            }
+
+            p.company_name {
+                font-size: 15px;
+            }
+        }
+
+        h4 {
+            margin-top: 0;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+
+        ul.footer-sitemap {
+            margin: 0;
+            font-size: 14px;
+
+            li {
+                a {
+                    display: block;
+                    position: relative;
+                    color: $text-color;
+                    padding: 3px 0 3px 25px;
+                    font-size: 13px;
+
+                    &:hover {
+                        color: $link-color;
+                    }
+
+                    &:before {
+                        @include arrow-right($color: $deepblue, $size: 7px, $border: 2px);
+                        margin: auto;
+                        top: 0;
+                        bottom: 0;
+                        left: 8px;
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+
+div#copyright {
+    background: $perlblue;
+    padding: 17px 0;
+
+    p {
+        font-size: 13px;
+        margin: 0 auto;
+        @include mq(md) {
+            margin: 0 0 0 auto;
+        }
+    }
+    
+    .flex {
+        justify-content: center;
+
+        @include mq(md) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    ul.menu-footer {
+        $height: 17px;
+        display: none;
+        margin: 0;
+        height: $height;
+        font-size: 14px;
+        border-left: 1px solid #{$text-color};
+        @include mq(md) {
+            display: flex;
+        }
+
+        li {
+            border-right: 1px solid #{$text-color};
+
+            a {
+                display: block;
+                color: $text-color;
+                height: $height;
+                padding: 2px 15px;
+                line-height: 1;
+
+                &:hover {
+                    opacity: .6;
+                }
+            }
+        }
+    }
+}

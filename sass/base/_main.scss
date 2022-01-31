@@ -1,0 +1,11 @@
+/* -----------------------------------
+メイン
+----------------------------------- */
+
+main {
+    margin-top: $header-height-sp;
+
+    @include mq(lg) {
+        margin-top: $header-height;
+    }
+}

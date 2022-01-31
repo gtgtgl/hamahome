@@ -1,0 +1,41 @@
+section#iedukuri {
+    background: $text-color;
+    
+    h2 {
+        color: $white;
+    }
+
+    p {
+        color: $white;
+    }
+
+}
+a.banner {
+    display: block;
+    background: white;
+    img {
+        vertical-align: middle;
+        transition: .3s;
+    }
+
+    &:hover {
+        img {
+            opacity: .6;
+        }
+    }
+}
+
+section#photo {
+    background: url(../img/bg02.jpg);
+    background-position: center;
+    background-repeat: repeat-x;
+    background-size: cover;
+    
+    h2 {
+        color: $white;
+    }
+
+    p {
+        color: $white;
+    }
+}

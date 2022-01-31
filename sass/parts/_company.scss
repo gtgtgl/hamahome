@@ -1,0 +1,53 @@
+main.company {
+    .company_img01 {
+        max-width: 250px;
+
+        @include mq(md) {
+            max-width: 350px;
+        }
+    }
+
+    .company_card {
+        background: $bgblue;
+        padding: 20px 10px;
+        max-width: 400px;
+        margin: 0 auto;
+
+        @include mq(lg) {
+            padding: 30px 15px;
+        }
+
+        p {
+            font-size: 14px;
+            &.title {
+                font-family: $font-design;
+                text-align: center;
+                font-weight: bold;
+                font-size: 16px;
+            }
+
+            @include mq(lg) {
+                font-size: 15px;
+
+                &.title {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    section.googlemap {
+        height: 300px;
+        padding: 0;
+
+        @include mq(lg) {
+            height: 450px;
+        }
+
+        iframe {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+}

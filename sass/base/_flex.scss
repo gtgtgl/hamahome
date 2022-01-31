@@ -1,0 +1,136 @@
+/* -----------------------------------
+Flexbox設定
+----------------------------------- */
+.container {
+  width: 100%;
+  padding-right: 5px;
+  padding-left: 5px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.wrap {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.flex-reverse {
+  flex-direction: row-reverse;
+}
+
+.flex-center {
+  justify-content: center;
+}
+
+.center {
+  text-align: center;
+}
+
+.left_center {
+  @include mq(md) {
+    text-align: center;
+  }
+}
+.right {
+  text-align: right;
+}
+
+@for $i from 1 through 15 {
+  .mt#{$i}0 {
+    margin-top: #{$i}0px;
+  }
+  .mb#{$i}0 {
+    margin-bottom: #{$i}0px;
+  }
+}
+
+.mt0 {
+  margin-top: 0 !important;
+}
+
+.mb0 {
+  margin-bottom: 0 !important;
+}
+
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    width: calc((100% * #{$i}) / 12);
+    padding: 0 15px;
+  }
+  .col-lg#{$i},
+  .col-md#{$i},
+  .col-sm#{$i},
+  .col-xl#{$i} {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+}
+@media (min-width: 481px) {
+  .sm {
+    flex-direction: row;
+  }
+  @for $i from 1 through 12 {
+    .col-sm#{$i} {
+      width: calc((100% * #{$i}) / 12);
+      padding: 0 15px;
+    }
+  }
+}
+@media (min-width: 768px) {
+  .md {
+    flex-direction: row;
+  }
+  @for $i from 1 through 12 {
+    .col-md#{$i} {
+      width: calc((100% * #{$i}) / 12);
+      padding: 0 15px;
+    }
+  }
+  .col-5-md {
+    width: 20%;
+    padding: 0;
+  }
+
+  .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1029px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 1030px) {
+  .container {
+    max-width: 960px;
+  }
+  @for $i from 1 through 12 {
+    .col-lg#{$i} {
+      width: calc((100% * #{$i}) / 12);
+      padding: 0 15px;
+    }
+  }
+  .col-5-lg {
+    width: 20%;
+    padding: 0;
+    margin-bottom: 15px;
+  }
+}
+@media (min-width: 1240px) {
+  .container {
+    max-width: 1100px;
+  }
+  @for $i from 1 through 12 {
+    .col-xl#{$i} {
+      width: calc((100% * #{$i}) / 12);
+      padding: 0 15px;
+    }
+  }
+}

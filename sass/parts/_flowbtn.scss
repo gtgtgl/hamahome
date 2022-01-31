@@ -1,0 +1,159 @@
+/* -----------------------------------
+フローボタン
+----------------------------------- */
+#flow_btn {
+    position: fixed;
+    background: $white;
+    width: 100%;
+    max-width: 320px;
+    height: $header-height-sp;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: map-get($layer, header);
+    transition: .3s;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+
+    &.is-scrollEnd {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+
+        @include mq(xl) {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: all;
+        }
+    }
+
+    &.checked {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+
+        @include mq(lg) {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: all;
+        }
+    }
+    @include mq(lg) {
+        max-width: 100%;
+        width: fit-content;
+    }
+
+    @include mq(xl) {
+        bottom: auto;
+        left: auto;
+        top: 0;
+        height: $header-height;
+        right: 1.5%;
+        .flowbtn_wrap {
+            justify-content: space-between;
+        }
+    }
+    
+    .flowbtn_wrap {
+        display: flex;
+        height: $header-height-sp;
+        
+        @include mq(xl) {
+            height: $header-height;
+            
+        }
+
+        a {
+            display: block;
+            &:hover {
+                opacity: .6;
+            }
+        }
+        $width-tel: 230px;
+        a.tel {
+            display: flex;
+            justify-content: center;
+            background: #E6E6E6;
+            color: $text-color;
+            width: $width-tel;
+            padding: 8px 0;
+
+            @include mq(xl) {
+                background: transparent;
+                width: 250px;
+            }
+            
+            div.img {
+                margin: 0 10px 0 0;
+                img {
+                    vertical-align: middle;
+                }
+            }
+            p {
+                line-height: 1.1;
+                margin: 0;
+                text-align: center;
+            }
+            p.small {
+                font-size: 10px;
+                font-family: $font-small;
+                span {
+                    display: none;
+                    @include mq(lg) {
+                        display: inline;
+                    }
+                }
+            }
+            p.number {
+                font-weight: 800;
+                font-family: $font-big;
+                font-size: 22px;
+                @include mq(lg) {
+                    font-size: 24px;
+                }
+            }
+        }
+        a.mail {
+            width: calc(100% - #{$width-tel});
+            background: $orange;
+            color: $white;
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+            padding: 7px 0;
+            img {
+                width: 26px;
+            }
+            span {
+                display: block;
+                font-size: 10px;
+                font-family: $font-small;
+            }
+
+            @include mq(lg) {
+                width: 200px;
+                flex-direction: row;
+                padding: 14px 0;
+                img {
+                    vertical-align: middle;
+                }
+                span {
+                    display: inline-block;
+                    vertical-align: middle;
+                    font-size: 15px;
+                    font-family: $font-normal;
+                }
+            }
+
+            @include mq(xl) {
+                height: 48px;
+                padding: 10px 0;
+                border-radius: 24px;
+                margin: 5px 10px auto auto;
+            }
+        }
+    }
+}
+  

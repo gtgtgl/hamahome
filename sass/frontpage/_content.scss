@@ -1,0 +1,34 @@
+a.content-toppage {
+    display: block;
+    color: $text-color;
+
+    @include mq(lg) {
+        padding: 0 18px;
+    }
+    
+    .entry-meta {
+        font-weight: 600;
+        color: $blue;
+        font-size: 14px;
+    }
+
+    p.entry-title {
+        font-size: 15px;
+        line-height: 1.6em;
+        margin-top: 3px;
+    }
+
+    &:hover {
+        opacity: .6;
+    }
+}
+
+.new_badge_wrap {
+    display: inline-block;
+
+    .new_badge {
+        display: inline-block;
+        margin-left: 10px;
+        color: $orange;
+    }
+}

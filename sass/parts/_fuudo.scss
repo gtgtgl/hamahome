@@ -1,0 +1,20 @@
+main.fuudo {
+    section#fuudo {
+        padding: 40px 0;
+        .season02 {
+            margin: 40px auto 0;
+        }
+    }
+
+    p.big {
+        font-size: 16px;
+
+        @include mq(md) {
+            font-size: 18px;
+        }
+    }
+
+    div.summer_wrap {
+        background: #FFF2E6;
+    }
+}

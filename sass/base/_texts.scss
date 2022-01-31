@@ -1,0 +1,72 @@
+/* -----------------------------------
+見出し、テキストなど
+----------------------------------- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+  line-height: 1.8em;
+}
+
+p {
+  margin: 0 auto 1em;
+  line-height: 2em;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+margin: 1.6em auto 1em;
+}
+
+h2 {
+  font-size: 22px;
+  font-family: $font-design;
+  font-weight: 600;
+  text-align: center;
+  @include mq($breakpoint: md) {
+    font-size: 28px;
+  }
+    span.orange {
+      color: $link-color;
+    }
+}
+
+h3 {
+  font-size: 18px;
+  color: $link-color;
+  @include mq($breakpoint: md) {
+    font-size: 21px;
+  }
+}
+
+p.left-center {
+  @include mq(md) {
+    text-align: center;
+  }
+}
+
+p.s {
+  font-size: 14px;
+  line-height: 1.8em;
+}
+
+p.big {
+  font-size: 24px;
+  font-family: $font-big;
+  font-weight: bold;
+}
+
+.text-blue {
+  color: $blue;
+}

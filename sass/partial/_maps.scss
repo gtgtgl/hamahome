@@ -1,0 +1,22 @@
+// レイアウト幅
+$layout-width-canvas: 1440px;
+$layout-width-inner: 1060px;
+$layout-width-vw: 1060;
+
+// ブレークポイント
+$breakpoints: (
+	"sm": "(min-width: 481px)",
+	"md": "(min-width: 768px)",
+	"lg": "(min-width: 1030px)",
+	"xl": "(min-width: 1240px)"
+);
+
+// z-index の指定
+$layer: (
+	modal: 100,
+	drawer: 40,
+	floating: 30,
+	header: 20,
+	footer: 10,
+	default: 1
+);

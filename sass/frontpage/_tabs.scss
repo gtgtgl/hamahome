@@ -1,0 +1,97 @@
+.news_wrap {
+    border-left: 2px dashed #d3d3d3;
+    border-right: 2px dashed #d3d3d3;
+    max-width: 500px;
+    margin: 40px auto;
+
+    @include mq(lg) {
+        max-width: 900px;
+    }
+    .tabs {
+        display: flex;
+        .tab {
+            display: block;
+            color: rgb(187, 187, 187);
+            text-align: center;
+            background: transparent;
+            border: none;
+            font-family: $font-normal;
+            font-weight: bold;
+            width: calc(100% / 3);
+            cursor: pointer;
+            padding: 15px 0;
+            font-size: 14px;
+            &:hover {
+                color: $link-color;
+            }
+            &:not(:last-of-type) {
+                border-right: 2px dashed #d3d3d3;
+            }
+            &.is-active {
+                color: $text-color;
+            }
+        }
+        @include mq(md) {
+            .tab {
+                font-size: 15px;
+            }
+        }
+        @include mq(lg) {
+            display: none;
+        }
+    }
+
+    .content {
+        .panel {
+            display: none;
+            padding: 10px;
+            &.is-show {
+                display: block;
+            }
+
+            .panel_header {
+                display: flex;
+                margin-bottom: 10px;
+
+                p.title {
+                    font-weight: 600;
+                    margin: 0 auto 0 18px;
+                    display: none;
+
+                    img {
+                        vertical-align: middle;
+                        width: 30px;
+                        margin: 0 7px 5px 0;
+                    }
+
+                    @include mq(lg) {
+                        display: block;
+                    }
+                }
+                
+                a.btn_list {
+                    margin: 0 0 10px auto;
+
+                    @include mq(lg) {
+                        margin: auto 10px auto auto;
+                    }
+                }
+            }
+            
+            @include mq(lg) {
+                display: block;
+            }
+        }
+
+        @include mq(lg) {
+            display: flex;
+            
+            .panel {
+                width: calc(100% / 3);
+                &:not(:last-of-type) {
+                    border-right: 2px dashed #d3d3d3;
+                }
+            }
+        }
+    }
+}

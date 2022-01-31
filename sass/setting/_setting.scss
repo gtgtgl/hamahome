@@ -1,0 +1,35 @@
+$white : #ffffff;
+$black: #333333;
+$orange: #FF7E00;
+$lightorange: #ffb328;
+$blue: #45B5A9;
+$perlblue: #C3E7E3;
+$bgblue: #EDF8F7;
+$deepblue: #0754A5;
+
+$background-color: $white;
+
+$text-color: $black;
+$link-color: $orange;
+$link-hover: $lightorange;
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@900&family=Shippori+Mincho+B1:wght@500;700&display=swap');
+
+$font_gothic: YuGothic,'Yu Gothic','ヒラギノ角ゴシック','Hiragino Sans',sans-serif;
+$font_mincho: 'Yu Mincho Light','YuMincho','Yu Mincho','游明朝体','ヒラギノ明朝 ProN','Hiragino Mincho ProN',sans-serif;
+$font_meiryo: 'メイリオ', Meiryo,'ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif;
+$font-normal: $font_gothic;
+$font-big: 'Noto Sans JP', sans-serif;
+$font-design: 'Shippori Mincho B1', serif;
+$font-small: $font_meiryo;
+$font__code: monaco, consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+$font__pre: "Courier 10 Pitch", courier, monospace;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  line-height: 1.6em;
+}

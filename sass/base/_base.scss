@@ -1,0 +1,68 @@
+/* -----------------------------------
+ベース設定
+----------------------------------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $background-color;
+  color: $text-color;
+  font-family: $font-normal;
+  font-weight: 500;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  vertical-align: middle;
+}
+
+section {
+  padding: 30px 0;
+
+  @include mq(lg) {
+    padding: 60px 0;
+  }
+}
+/* つけるとスマホでしか表示されなくなるクラス */
+
+.only-phone {
+  display: inline-block;
+  @include mq($breakpoint: sm) {
+    display: none;
+  }
+}
+/* つけるとタブレットでしか表示されなくなるクラス */
+
+.only-pad {
+  display: none;
+  @include mq($breakpoint: sm) {
+    display: inline-block;
+  }
+  @include mq($breakpoint: md) {
+    display: none;
+  }
+}
+/* つけるとPCでしか表示されなくなるクラス */
+
+.only-pc {
+  display: none;
+  @include mq($breakpoint: md) {
+    display: inline-block;
+  }
+}
+/* つけるとPCで見たときだけ表示されなくなるクラス */
+
+.except-pc {
+  display: inline-block;
+  @include mq($breakpoint: md) {
+    display: none;
+  }
+}
+
+.max900 {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}

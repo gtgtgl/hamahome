@@ -1,0 +1,46 @@
+div#page_topimg {
+    background-color: black;
+    height: 200px;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    h1 {
+        color: $white;
+        font-family: $font-design;
+        position: absolute;
+        top: 30%;
+        margin: auto;
+        right: 0;
+        left: 0;
+        text-align: center;
+        letter-spacing: 0.1em;
+        font-size: 26px;
+    }
+
+    @include mq(md) {
+        height: 350px;
+
+        h1 {
+            top: 40%;
+            font-size: 30px;
+        }
+    }
+
+    &.page_company {
+        background-image: url('../img/company/header.jpg');
+    }
+
+    &.page_fuudo {
+        background-image: url('../img/fuudo/header.jpg');
+    }
+
+    &.page_staff {
+        background-image: url('../img/staff/header.jpg');
+    }
+
+    &.page_charcoal {
+        background-image: url('../img/fuudo/charcoal/header.jpg');
+    }
+}

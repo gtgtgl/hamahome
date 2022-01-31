@@ -1,0 +1,30 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border-top: 1px solid #C2C2C2;
+    border-bottom: 1px solid #C2C2C2;
+    tr {
+      &:not(:first-of-type) {
+        border-top: 1px solid #C2C2C2;
+      }
+    }
+  
+    th, td {
+      padding: 11px 15px;
+      font-size: 15px;
+      line-height: 1.8em;
+    }
+    th {
+        text-align: left;
+    }
+    @include mq(md) {
+        th {
+            padding: 12px 10px 12px 20px;
+        }
+        td {
+            padding: 12px 20px;
+        }
+    }
+  
+  }
+  

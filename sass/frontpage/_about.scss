@@ -1,0 +1,66 @@
+section#top_about {
+    .bg_screen {
+        width: 100%;
+        height: 100%;
+        background: rgb(255,255,255);
+        background: linear-gradient(90deg, rgba(255,255,255,1) 30%, rgba(255,255,255,0) 42%);
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 2;
+    }
+
+    a.banner02 {
+        position: relative;
+        display: block;
+        color: $text-color;
+        border: 1.5px dashed #84959E;
+
+        img.bgimg {
+            display: block;
+            margin: 0 0 0 auto;
+            z-index: 1;
+            opacity: .4;
+
+            @include mq(md) {
+                height: 200px;
+                object-fit: cover;
+                object-position: center;
+                opacity: 1;
+            }
+        }
+
+        .text {
+            position: absolute;
+            z-index: 3;
+            top: 10px;
+            padding: 5px 15px;
+
+            p {
+                font-size: 13px;
+                line-height: 1.6em;
+            }
+
+            p.title {
+                font-family: $font-big;
+                font-size: 15px;
+                font-weight: bold;
+                margin-bottom: 8px;
+            }
+
+            @include mq(md) {
+                width: 60%;
+                top: 20px;
+                padding: 10px 30px;
+
+                p {
+                    font-size: 15px;
+                }
+
+                p.title {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}

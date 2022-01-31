@@ -1,0 +1,179 @@
+section#top_construction {
+    background: $bgblue;
+
+    div.container {
+        position: relative;
+        > a.btn_list {
+            position: absolute;
+            top: 6px;
+            right: 20px;
+
+            @include mq(md) {
+                top: 10px;
+            }
+        }
+    }
+    
+    div.construction_wrap {
+        width: 100%;
+        position: relative;
+
+        button.arrow {
+            width: 40px;
+            height: 50px;
+            display: block;
+            position: absolute;
+            visibility: visible;
+            pointer-events: all;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            transition: .3s;
+            z-index: 5;
+
+            &:hover {
+                opacity: .6;
+            }
+
+            &:after {
+                $size-arrow: 30px;
+                content: '';
+                display: block;
+                position: absolute;
+                width: $size-arrow;
+                height: $size-arrow;
+                transform: rotate(45deg);
+                margin: auto;
+                top: 0;
+                bottom: 0;
+            }
+
+            &.rightbutton {
+                right: 0;
+
+                &:after {
+                    right: 10px;
+                    border-right: 2px solid #{$text-color};
+                    border-top: 2px solid #{$text-color};
+                }
+            }
+
+            &.leftbutton {
+                left: 0;
+
+                &:after {
+                    left: 10px;
+                    border-left: 2px solid #{$text-color};
+                    border-bottom: 2px solid #{$text-color};
+                }
+            }
+
+            @include mq(lg) {
+                visibility: hidden;
+                pointer-events: none;
+            }
+        }
+
+        div.construction_inner {
+            overflow-x: auto;
+            @include hidden-scrollbar;
+        }
+
+        div.construction_item_container {
+            display: flex;
+            width: 930px;
+
+            @include mq(xl) {
+                width: 100%;
+            }
+        }
+
+    }
+    
+}
+
+a.construction_item {
+    width: calc((100% - 60px) / 4);
+    display: block;
+    background: white;
+    color: $text-color;
+    overflow: hidden;
+
+    &:not(:last-of-type) {
+        margin-right: 20px;
+    }
+
+    &:hover {
+        .img, .text {
+            opacity: .6;
+        }
+    }
+
+    div.img {
+        height: 150px;
+        transition: .3s;
+        position: relative;
+
+        .new_badge_wrap {
+            position: absolute;
+            background: $link-color;
+            z-index: 5;
+            width: 70px;
+            height: 70px;
+            transform: rotate(-45deg);
+            top: -35px;
+            left: -35px;
+
+            .new_badge {
+                color: $white;
+                font-size: 11px;
+                font-weight: bold;
+                position: absolute;
+                margin: auto;
+                right: 0;
+                left: 0;
+                text-align: center;
+                bottom: 1px;
+            }
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+    
+    .text {
+        padding: 13px;
+        transition: .3s;
+        
+        .title {
+            font-size: 15px;
+            font-weight: bold;
+            margin-bottom: 0;
+            margin-bottom: 5px;
+            word-break: break-all;
+            overflow-wrap: break-word;
+            line-height: 1.6em;
+        }
+        span.construction_name {
+            display: block;
+            font-size: 12px;
+            margin-bottom: 5px;
+        }
+        span.construction_category {
+            display: inline-block;
+            color: #0059B3;
+            font-size: 12px;
+            border: 1px solid;
+            padding: 1px 4px;
+            width: fit-content;
+            margin-right: 5px;
+        }
+    }
+}

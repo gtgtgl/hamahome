@@ -1,0 +1,178 @@
+/* -----------------------------------
+グローバルナビゲーション
+----------------------------------- */
+
+// 参考：https://coco-factory.jp/ugokuweb/move01/5-1-1/
+
+nav {
+    color: $text-color;
+    text-align: left;
+
+    >ul>li>a {
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin: 0 0 0 30px;
+  
+      li {
+        position: relative;
+
+        a {
+          display: block;
+          text-decoration: none;
+          color: $text-color;
+          padding: 15px 14px;
+          transition:all .3s;
+          font-size: 14px;
+
+          &:hover {
+            color: $link-color;
+          }
+        }
+
+        li a {
+          padding: 8px 10px 8px 45px;
+          position: relative;
+          &:before {
+            @include arrow-right($color: $orange, $border: 2.5px, $size: 8px);
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            left: 20px;
+          }
+        }
+      }
+      
+        /*2階層目以降は横並びにしない*/
+        ul{
+          display: block;
+        }
+    }
+  }
+  
+
+  /*== 2・3階層目の共通設定 */
+  
+  /*下の階層を持っているulの指定*/
+  nav li.has-child ul{
+      /*絶対配置で位置を指定*/
+    position: absolute;
+    left: -50px;
+    padding: 10px 0;
+    margin: 0;
+    top: 54px;
+    z-index: 4;
+    width:200px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s;
+    background: white;
+    border: 3px solid #{$perlblue};
+
+    &:after, &:before {
+      bottom: 100%;
+      left: 50%;
+      border: solid transparent;
+      content: "";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+    }
+    
+    &:after {
+      border-color: rgba(136, 183, 213, 0);
+      border-bottom-color: $white;
+      border-width: 10px;
+      margin-left: -10px;
+    }
+    &:before {
+      border-color: rgba(194, 225, 245, 0);
+      border-bottom-color: $perlblue;
+      border-width: 14px;
+      margin-left: -14px;
+    }
+  }
+  
+  /*hoverしたら表示*/
+  nav li.has-child:hover > ul,
+  nav li.has-child ul li:hover > ul,
+  nav li.has-child:active > ul,
+  nav li.has-child ul li:active > ul{
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  
+  /*==768px以下の形状*/
+  
+  @media screen and (max-width:1029px){
+    nav{
+      padding: 0;
+
+      ul{
+        display: block;
+        margin: 0;
+        li.has-child a {
+          padding-bottom: 4px;
+        }
+
+        li.has-child > a {
+          font-size: 18px;
+          font-family: $font-design;
+          font-weight: bold;
+          position: relative;
+
+          &:after {
+            content: "＋";
+            display: block;
+            position: absolute;
+            right: 50px;
+            top: 11px;
+            font-size: 24px;
+            color: $text-color;
+          }
+        }
+        
+        li.has-child.active > a {
+          &:after {
+            content: "－";
+          }
+        }
+      }
+
+      li.has-child ul {
+        position: relative;
+        padding: 0;
+        left:0;
+        top:0;
+        width:100%;
+        visibility:visible;/*JSで制御するため一旦表示*/
+        opacity:1;/*JSで制御するため一旦表示*/
+        display: none;/*JSのslidetoggleで表示させるため非表示に*/
+        transition:none;/*JSで制御するためCSSのアニメーションを切る*/
+        border: none;
+        background: transparent;
+        &:before, &:after {
+          display: none;
+        }
+
+        li {
+          padding-top: 0;
+          a {
+            &:before, &:after {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+    
+  
+  }
+  

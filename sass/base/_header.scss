@@ -1,0 +1,108 @@
+/* -----------------------------------
+ヘッダー
+----------------------------------- */
+
+header.site-header {
+    background: white;
+    position: fixed;
+    width: 100%;
+    height: $header-height-sp;
+    top: 0;
+    right: 0;
+    z-index: map-get($layer, header);
+    box-shadow: 0 2px 10px #00000024;
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      position: relative;
+      min-width: 90%;
+
+      @include mq(lg) {
+        min-width: 0;
+        width: 100%;
+        max-width: 1260px;
+      }
+    }
+
+    .site-title {
+        margin: 0;
+        height: $header-height-sp;
+        a {
+            display: block;
+            padding: 5px 0;
+        }
+        img {
+            width: 170px;
+        }
+    }
+    @include mq(lg) {
+      height: $header-height;
+
+      .site-title {
+        height: $header-height;
+        a {
+          height: $header-height;
+        }
+      }
+    }
+
+}
+
+button#close_mobile_menu {
+    display: block;
+    width: 100vw;
+    height: 50px;
+    cursor: pointer;
+    text-align: right;
+    font-size: 50px;
+    background: transparent;
+    border: none;
+    color: $text-color;
+    padding: 0 20px 0 0;
+    @include mq(lg) {
+      display: none;
+    }
+  }
+  
+button#open_mobile_menu {
+    background: transparent;
+    margin: 0;
+    cursor: pointer;
+    border: 0;
+    display: block;
+    width: $header-height-sp;
+    height: $header-height-sp;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    @include mq(lg) {
+      display: none;
+    }
+  
+    img {
+      pointer-events: none;
+      width: 30px;
+    }
+  
+    &:hover {
+      cursor: pointer;
+    }
+  
+    &#inmenu {
+      color: #ffffff;
+    }
+  
+    &#inmenu-back {
+      opacity: 0;
+      width: 100vw;
+      height: 100vh;
+      top: 0;
+      right: 0;
+      z-index: -1;
+    }
+  }
+  

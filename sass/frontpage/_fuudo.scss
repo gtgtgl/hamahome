@@ -1,0 +1,102 @@
+section#fuudo {
+    background: url('../img/bg01.jpg');
+    background-position: top center;
+    background-repeat: repeat;
+    
+    p.left-center {
+        br {
+            display: none;
+        }
+        @include mq(sm) {
+            text-align: center;
+            br {
+                display: inline-block;
+            }
+        }
+    }
+
+    .season {
+        background: white;
+        padding: 40px 0 1px;
+        max-width: 500px;
+        margin: 40px auto;
+        position: relative;
+
+        @include mq(md) {
+            max-width: 100%;
+            a.btn-01 {
+                margin-top: 0;
+            }
+        }
+
+        @include mq(lg) {
+            a.btn-01 {
+                position: absolute;
+                margin: 0 auto;
+                right: 0;
+                left: 0;
+                bottom: -30px;
+            }
+        }
+
+        .img {
+            text-align: center;
+            img {
+                width: 200px;
+            }
+        }
+
+        .title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            text-align: center;
+            @include mq(md) {
+                text-align: left;
+            }
+        }
+
+        .col-lg6 {
+            margin-bottom: 0;
+        }
+    }
+
+    .season02 {
+        max-width: 500px;
+        margin: 40px auto;
+        & > div {
+            max-width: 300px;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 80px;
+        }
+
+        .img {
+            height: 130px;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+        }
+
+        @include mq(md) {
+            max-width: 100%;
+        }
+
+        @include mq(lg) {
+            margin: 80px auto 0;
+        }
+        img {
+            display: block;
+            margin: 0 auto 10px;
+        }
+
+        a.btn-01 {
+            min-width: 180px;
+            font-size: 15px;
+            height: 45px;
+            line-height: 45px;
+            margin: auto auto 0;
+        }
+    }
+}

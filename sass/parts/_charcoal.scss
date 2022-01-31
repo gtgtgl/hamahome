@@ -1,0 +1,103 @@
+section#charcoal-sec01 {
+    background: #F3F4F5;
+    padding: 40px 0;
+
+    ul.ul_charcoal {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 450px;
+        margin: auto;
+
+        @include mq(lg) {
+            max-width: 750px;
+        }
+        
+        li {
+            padding-left: 35px;
+            position: relative;
+            font-weight: bold;
+            width: 100%;
+            margin-bottom: 8px;
+
+            &:before {
+                content: '';
+                display: block;
+                background: url('../img/check.svg');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 26px;
+                height: 28px;
+                position: absolute;
+                left: 0;
+            }
+
+            @include mq(lg) {
+                font-size: 17px;
+                &:nth-of-type(2n-1) {
+                    margin-right: 16px;
+                    width: calc(42% - 8px);
+                }
+                &:nth-of-type(2n) {
+                    width: calc(58% - 8px);
+                }
+            }
+        }
+    }
+}
+
+section#charcoal-sec02 {
+    p.big {
+        font-size: 18px;
+        margin: 10px 0;
+    }
+
+    .img {
+        position: relative;
+        max-width: 300px;
+        margin: 0 20px 60px;
+
+        @include mq(lg) {
+            margin: 0 20px;
+        }
+
+        .circle {
+            $size: 100px;
+            position: absolute;
+            z-index: 5;
+            border: 1.5px solid #000;
+            height: $size;
+            width: $size;
+            border-radius: $size;
+            background: white;
+            display: flex;
+            align-items: center;
+            left: -30px;
+            top: -30px;
+
+            p {
+                line-height: 1.4em;
+                font-size: 14px;
+                font-weight: bold;
+                margin: auto;
+            }
+        }
+        &.img04 {
+            .circle {
+                background: #000;
+                p {
+                    color: white;
+                }
+            }
+        }
+    }
+
+    p.p {
+        font-size: 15px;
+        text-align: left;
+    }
+}
+section#charcoal-sec03 {
+    background: #F3F4F5;
+    padding: 40px 0;
+}

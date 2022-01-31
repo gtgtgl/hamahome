@@ -1,0 +1,70 @@
+/* -----------------------------------
+メニュー
+----------------------------------- */
+
+#mobile_menu {
+  $max-width: 500px;
+  overflow: scroll;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background: #C9EBE5;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: 0.3s;
+    z-index: map-get($layer, modal);
+    &.checked {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: all;
+    }
+
+    nav.main-navigation, div.menu_company {
+      max-width: $max-width;
+      margin: auto;
+    }
+
+    @include mq(lg) {
+      height: $header-height;
+      position: relative;
+      background: transparent;
+      opacity: 1;
+      visibility: visible;
+      overflow: visible;
+      pointer-events: all;
+      z-index: 1;
+      width: fit-content;
+
+      nav.main-navigation {
+        max-width: 100%;
+      }
+      
+      .menu_company {
+        display: none;
+    }
+      
+  }
+}
+
+
+div.menu_company {
+  max-width: 500px;
+  margin: 60px auto 30px;
+  padding: 0 15px;
+
+  img.site_logo {
+    width: 150px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+  p.company_name {
+    font-size: 16px;
+    font-family: $font-big;
+    margin: 0;
+  }
+}
