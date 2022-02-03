@@ -1,0 +1,53 @@
+.warranty {
+    $purple: #34327F;
+    $lightpurple: #5855af;
+    h3 {
+        color: $purple;
+        font-size: 18px;
+        line-height: 1.6em;
+        margin: 0 auto 10px;
+    }
+
+    a.btn-01 {
+        background: $purple;
+        padding: 0 40px;
+        font-size: 15px;
+        margin: 20px auto;
+        &:hover {
+            background: $lightpurple;
+        }
+    }
+
+    .has-circle {
+        width: fit-content;
+        margin: 0 auto;
+        position: relative;
+
+        .circle {
+            $size: 100px;
+            position: absolute;
+            background: $purple;
+            width: $size;
+            height: $size;
+            bottom: -20px;
+            left: -20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+
+            p {
+                color: $white;
+                font-size: 14px;
+                font-weight: bold;
+                line-height: 1.3em;
+                text-align: center;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+section.bg_purple {
+    background: #E8E7F0;
+    padding: 40px 0;
+}
