@@ -149,8 +149,8 @@ Flexbox設定
 ----------------------------------- */
 .container {
   width: 100%;
-  padding-right: 5px;
-  padding-left: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -614,12 +614,12 @@ Flexbox設定
 }
 @media (min-width: 768px) and (max-width: 1029px) {
   .container {
-    max-width: 720px;
+    width: 720px;
   }
 }
 @media (min-width: 1030px) {
   .container {
-    max-width: 960px;
+    width: 960px;
   }
 
   .col-lg1 {
@@ -690,7 +690,7 @@ Flexbox設定
 }
 @media (min-width: 1240px) {
   .container {
-    max-width: 1100px;
+    width: 1100px;
   }
 
   .col-xl1 {
@@ -798,12 +798,11 @@ h2 span.orange {
 }
 
 h3 {
-  font-size: 18px;
-  color: #FF7E00;
+  font-size: 21px;
 }
 @media (min-width: 768px) {
   h3 {
-    font-size: 21px;
+    font-size: 24px;
   }
 }
 
@@ -826,6 +825,12 @@ p.big {
 
 .text-blue {
   color: #45B5A9;
+}
+
+.max700 {
+  max-width: 700px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 /* -----------------------------------
@@ -1877,12 +1882,148 @@ section#photo p {
   }
 }
 
+/*---------------------------------
+アコーディオンボックス
+--------------------------------*/
+.acbox {
+  width: auto;
+  font-size: 0px;
+  /* ラベルと開く部分を分離する時は数値を入れる */
+  margin: 0 10px;
+  /* ボックス全体の位置調整 */
+  max-width: 700px;
+  margin: auto;
+}
+.acbox:nth-of-type(2n-1) {
+  background: #EDF8F7;
+}
+.acbox:nth-of-type(2n) {
+  background: #DBF1EE;
+}
+.acbox label {
+  width: auto;
+  font-size: 16px;
+  /* ラベルの文字サイズ */
+  position: relative;
+  display: block;
+  padding: 18px 50px 18px 50px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+@media (min-width: 768px) {
+  .acbox label {
+    padding: 22px 70px 22px 90px;
+  }
+}
+.acbox label:before {
+  content: "";
+  /* ラベルのアイコン */
+  width: 20px;
+  height: 20px;
+  background: url("../img/icon-q.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 20px;
+  left: 15px;
+}
+@media (min-width: 768px) {
+  .acbox label:before {
+    width: 25px;
+    height: 25px;
+    top: 22px;
+    left: 34px;
+  }
+}
+.acbox label:after {
+  content: "＋";
+  /* ラベルのアイコン */
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 22px;
+  color: #45B5A9;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  margin-top: -14px;
+}
+@media (min-width: 768px) {
+  .acbox label:after {
+    right: 25px;
+  }
+}
+.acbox input {
+  display: none;
+}
+.acbox input:checked ~ label::after {
+  content: "－";
+  /* ラベルをクリックした後のアイコン */
+}
+.acbox input:checked ~ div {
+  height: auto;
+  border-radius: 0px;
+  padding: 18px 50px 18px 50px;
+  opacity: 1;
+  position: relative;
+}
+.acbox input:checked ~ div:before {
+  opacity: 1;
+}
+@media (min-width: 768px) {
+  .acbox input:checked ~ div {
+    padding: 22px 70px 22px 90px;
+  }
+}
+.acbox div {
+  height: 0px;
+  overflow: hidden;
+  opacity: 0;
+  transition: 0.3s;
+  /* 開閉スピードの設定 */
+}
+.acbox .acbox-under {
+  font-size: 15px;
+  /* 開いた部分の文字サイズ */
+  line-height: 1.6em;
+  background: white;
+}
+.acbox .acbox-under p {
+  margin: 0;
+}
+.acbox .acbox-under:before {
+  content: "";
+  /* ラベルのアイコン */
+  width: 20px;
+  height: 20px;
+  background: url("../img/icon-a.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 20px;
+  left: 15px;
+  opacity: 0;
+  transition: 0.3s;
+}
+@media (min-width: 768px) {
+  .acbox .acbox-under:before {
+    width: 25px;
+    height: 25px;
+    top: 22px;
+    left: 34px;
+  }
+}
+
+.acbox + .acbox {
+  border-top: none;
+}
+
 /* -----------------------------------
 パンくずリスト
 ----------------------------------- */
 #breadcrumb ul {
   display: flex;
-  padding: 10px 0;
+  padding: 20px 0;
   margin: 0;
 }
 #breadcrumb ul li {
@@ -1903,45 +2044,15 @@ section#charcoal-sec01 {
   background: #F3F4F5;
   padding: 40px 0;
 }
-section#charcoal-sec01 ul.ul_charcoal {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 450px;
-  margin: auto;
-}
 @media (min-width: 1030px) {
-  section#charcoal-sec01 ul.ul_charcoal {
-    max-width: 750px;
-  }
-}
-section#charcoal-sec01 ul.ul_charcoal li {
-  padding-left: 35px;
-  position: relative;
-  font-weight: bold;
-  width: 100%;
-  margin-bottom: 8px;
-}
-section#charcoal-sec01 ul.ul_charcoal li:before {
-  content: "";
-  display: block;
-  background: url("../img/check.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 26px;
-  height: 28px;
-  position: absolute;
-  left: 0;
-}
-@media (min-width: 1030px) {
-  section#charcoal-sec01 ul.ul_charcoal li {
+  section#charcoal-sec01 ul.ul_check li {
     font-size: 17px;
   }
-  section#charcoal-sec01 ul.ul_charcoal li:nth-of-type(2n-1) {
+  section#charcoal-sec01 ul.ul_check li:nth-of-type(2n-1) {
     margin-right: 16px;
     width: calc(42% - 8px);
   }
-  section#charcoal-sec01 ul.ul_charcoal li:nth-of-type(2n) {
+  section#charcoal-sec01 ul.ul_check li:nth-of-type(2n) {
     width: calc(58% - 8px);
   }
 }
@@ -1990,9 +2101,14 @@ section#charcoal-sec02 p.p {
   text-align: left;
 }
 
-section#charcoal-sec03 {
+.charcoal-gray {
   background: #F3F4F5;
   padding: 40px 0;
+}
+.charcoal-gray h3 {
+  font-size: 18px;
+  color: #333333;
+  margin-bottom: 5px;
 }
 
 main.company .company_img01 {
@@ -2246,6 +2362,37 @@ ol.ol li {
   margin-bottom: 10px;
 }
 
+ul.ul_check {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 450px;
+  margin: auto;
+}
+@media (min-width: 1030px) {
+  ul.ul_check {
+    max-width: 750px;
+  }
+}
+ul.ul_check li {
+  padding-left: 35px;
+  position: relative;
+  font-weight: bold;
+  width: 100%;
+  margin-bottom: 8px;
+}
+ul.ul_check li:before {
+  content: "";
+  display: block;
+  background: url("../img/check.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 26px;
+  height: 28px;
+  position: absolute;
+  left: 0;
+}
+
 /* -----------------------------------
 メニュー
 ----------------------------------- */
@@ -2268,9 +2415,13 @@ ol.ol li {
   visibility: visible;
   pointer-events: all;
 }
-#mobile_menu nav.main-navigation, #mobile_menu div.menu_company {
+#mobile_menu nav.main-navigation {
   max-width: 500px;
   margin: auto;
+}
+#mobile_menu div.menu_company {
+  max-width: 500px;
+  margin: 60px auto;
 }
 @media (min-width: 1030px) {
   #mobile_menu {
@@ -2351,6 +2502,329 @@ div#page_topimg.page_staff {
 }
 div#page_topimg.page_charcoal {
   background-image: url("../img/fuudo/charcoal/header.jpg");
+}
+div#page_topimg.page_reform {
+  background-image: url("../img/reform/header.jpg");
+}
+div#page_topimg.page_warranty {
+  background-image: url("../img/warranty/header.jpg");
+}
+
+.reform img.img02 {
+  display: none;
+}
+@media (min-width: 1030px) {
+  .reform img.img01 {
+    display: none;
+  }
+  .reform img.img02 {
+    display: inline-block;
+  }
+}
+.reform div.comment_wrap {
+  background: #FF7E00;
+  color: #ffffff;
+  padding: 10px;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .reform div.comment_wrap {
+    display: none;
+  }
+}
+.reform div.comment_wrap:after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: #FF7E00;
+  position: absolute;
+  margin: auto;
+  right: 0;
+  left: 0;
+  bottom: -9px;
+  z-index: -1;
+  transform: rotate(45deg) skew(16deg, 16deg);
+}
+.reform div.comment_wrap p {
+  font-family: "Noto Sans JP", sans-serif;
+  margin: 0;
+  font-size: 3.4vw;
+  text-align: center;
+}
+.reform .reform_buttons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+.reform .reform_buttons .reform_button {
+  display: block;
+  color: #45B5A9;
+  background: white;
+  border: 2px solid #45B5A9;
+  font-family: "Noto Sans JP", sans-serif;
+  width: calc((100% - 30px) / 2);
+  margin: 10px auto;
+  text-align: left;
+  height: calc(6.5vw + 22px);
+  font-size: 4vw;
+  border-radius: 6.5vw;
+  padding: 10px 15px;
+  position: relative;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.reform .reform_buttons .reform_button:after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  display: block;
+  position: absolute;
+  border-right: 2px solid #45B5A9;
+  border-top: 2px solid #45B5A9;
+  transform: rotate(45deg);
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  right: 17px;
+  transition: 0.3s;
+}
+.reform .reform_buttons .reform_button span {
+  display: inline-block;
+  width: 6.5vw;
+  height: 6.5vw;
+  background: #45B5A9;
+  color: #ffffff;
+  border-radius: 6.5vw;
+  line-height: 6.5vw;
+  text-align: center;
+  margin-right: 5px;
+  transition: 0.3s;
+}
+@media (min-width: 481px) {
+  .reform .reform_buttons .reform_button {
+    font-size: 18px;
+    height: calc(32px + 22px);
+    border-radius: 32px;
+  }
+  .reform .reform_buttons .reform_button span {
+    width: 32px;
+    height: 32px;
+    border-radius: 32px;
+    line-height: 32px;
+  }
+}
+@media (min-width: 768px) {
+  .reform .reform_buttons .reform_button {
+    width: calc((100% - 40px) / 3);
+    font-size: 17px;
+    text-align: center;
+  }
+}
+@media (min-width: 1030px) {
+  .reform .reform_buttons .reform_button {
+    width: calc((100% - 70px) / 4);
+  }
+}
+.reform .reform_buttons .reform_button:hover, .reform .reform_buttons .reform_button.is-active {
+  background: #45B5A9;
+  color: #ffffff;
+}
+.reform .reform_buttons .reform_button:hover:after, .reform .reform_buttons .reform_button.is-active:after {
+  border-right-color: #ffffff;
+  border-top-color: #ffffff;
+}
+.reform .reform_buttons .reform_button:hover span, .reform .reform_buttons .reform_button.is-active span {
+  background: white;
+  color: #45B5A9;
+}
+
+#reform_content {
+  position: relative;
+  padding: 0;
+}
+@media (min-width: 768px) {
+  #reform_content {
+    padding-bottom: 60px;
+  }
+}
+#reform_content .reform_content_wrap {
+  transition: 0.3s;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+#reform_content .reform_content_wrap.is-show {
+  position: relative;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+#reform_content .title {
+  background: #45B5A9;
+}
+@media (min-width: 768px) {
+  #reform_content .title {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0 auto;
+  }
+}
+#reform_content .title p {
+  color: #ffffff;
+  margin: 0;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 24px;
+  text-align: center;
+  padding: 10px;
+}
+#reform_content .title p span {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  background: #ffffff;
+  color: #45B5A9;
+  border-radius: 36px;
+  line-height: 36px;
+  text-align: center;
+  margin-right: 5px;
+  transition: 0.3s;
+}
+#reform_content .content {
+  background: #E1F3F1;
+  padding: 30px 0 0;
+}
+@media (min-width: 768px) {
+  #reform_content .content {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0 auto;
+  }
+}
+#reform_content .content h3 {
+  margin: 0 auto 5px;
+  max-width: 500px;
+}
+#reform_content .content ul.ul_check {
+  max-width: 500px;
+}
+#reform_content .content .advice {
+  text-align: center;
+}
+@media (min-width: 481px) {
+  #reform_content .content .advice {
+    text-align: right;
+  }
+}
+#reform_content .content .whitecomment {
+  background: white;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  min-width: 300px;
+  padding: 19px 33px;
+  border-radius: 70px/50px;
+  margin: auto;
+  position: relative;
+  z-index: 2;
+}
+#reform_content .content .whitecomment:before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: #ffffff;
+  position: absolute;
+  margin: auto;
+  right: 0;
+  left: 0;
+  top: -9px;
+  z-index: -1;
+  transform: rotate(45deg) skew(16deg, 16deg);
+}
+@media (min-width: 481px) {
+  #reform_content .content .whitecomment:before {
+    top: auto;
+    bottom: 30%;
+    right: auto;
+    left: -6px;
+    transform: rotate(126deg) skew(16deg, 16deg);
+  }
+}
+#reform_content .content .whitecomment p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.8em;
+}
+#reform_content .content .whitecomment_wrap {
+  display: flex;
+  align-items: center;
+}
+
+.box_blue {
+  border: 2px solid #45B5A9;
+  background: #ffffff;
+  margin: 10px auto 30px;
+  padding: 10px;
+  font-size: 15px;
+  max-width: 500px;
+}
+.box_blue p {
+  color: #45B5A9;
+  line-height: 1.8em;
+  margin: 0;
+}
+
+.box_white {
+  background: white;
+  padding: 15px;
+  max-width: 500px;
+  margin: auto;
+}
+.box_white ul {
+  counter-reset: number;
+  list-style-type: none !important;
+  margin-top: 20px;
+}
+.box_white ul li {
+  font-weight: bold;
+  position: relative;
+  margin-bottom: 20px;
+  font-size: 18px;
+  padding-left: 5px;
+}
+.box_white ul li:before {
+  /* 以下数字をつける */
+  position: absolute;
+  counter-increment: number;
+  content: counter(number);
+  /*以下数字のデザイン変える*/
+  display: inline-block;
+  background: #ffffff;
+  color: #333333;
+  border: 2px solid #333333;
+  font-family: "Avenir", "Arial Black", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 50%;
+  left: -42px;
+  width: 35px;
+  height: 35px;
+  line-height: 31px;
+  text-align: center;
+  /*以下 上下中央寄せのため*/
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 main.staff .staff_card {
@@ -2478,38 +2952,49 @@ table th {
   }
 }
 
-/* -----------------------------------
-上に戻るボタン
------------------------------------ */
-a#totop {
-  display: block;
-  width: 60px;
-  height: 60px;
-  position: fixed;
-  z-index: 20;
-  background: #333333;
-  right: 0;
-  bottom: 0;
+.warranty h3 {
+  color: #34327F;
+  font-size: 18px;
+  line-height: 1.6em;
+  margin: 0 auto 10px;
 }
-a#totop.totop-hidden {
-  opacity: 0;
-  z-index: -1;
+.warranty a.btn-01 {
+  background: #34327F;
+  padding: 0 40px;
+  font-size: 15px;
+  margin: 20px auto;
 }
-a#totop:before {
-  content: "";
-  display: block;
+.warranty a.btn-01:hover {
+  background: #5855af;
+}
+.warranty .has-circle {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  position: relative;
+}
+.warranty .has-circle .circle {
   position: absolute;
-  width: 30px;
-  height: 30px;
-  border-top: 1px solid #ffffff;
-  border-left: 1px solid #ffffff;
-  transform: rotate(45deg);
-  margin: auto;
-  top: 24px;
-  right: 0;
-  left: 0;
-  transition: 0.3s;
+  background: #34327F;
+  width: 100px;
+  height: 100px;
+  bottom: -20px;
+  left: -20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
 }
-a#totop:hover:before {
-  top: 20px;
+.warranty .has-circle .circle p {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.3em;
+  text-align: center;
+  margin: 0 auto;
+}
+
+section.bg_purple {
+  background: #E8E7F0;
+  padding: 40px 0;
 }

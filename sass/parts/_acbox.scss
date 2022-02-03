@@ -1,0 +1,129 @@
+/*---------------------------------
+アコーディオンボックス
+--------------------------------*/
+.acbox{
+  width: auto;
+  font-size:0px; /* ラベルと開く部分を分離する時は数値を入れる */
+  margin:0 10px; /* ボックス全体の位置調整 */
+  max-width: 700px;
+  margin: auto;
+  
+  &:nth-of-type(2n-1) {
+    background: #EDF8F7;
+  }
+  
+  &:nth-of-type(2n) {
+    background: #DBF1EE;
+  }
+   label{
+    width: auto;
+    font-size: 16px; /* ラベルの文字サイズ */
+    position: relative;
+    display: block;
+    padding: 18px 50px 18px 50px;
+    cursor: pointer;
+    transition: .3s;
+
+    @include mq(md) {
+      padding: 22px 70px 22px 90px;
+    }
+
+    &:hover{
+      // background: $whitepink; /* ラベルにマウスを乗せた時の背景色 */
+    }
+    &:before{
+      content:''; /* ラベルのアイコン */
+      width: 20px;
+      height: 20px;
+      background: url('../img/icon-q.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      position: absolute;
+      top: 20px;
+      left: 15px;
+      @include mq(md) {
+        width: 25px;
+        height: 25px;
+        top: 22px;
+        left: 34px;
+      }
+    }
+    &:after{
+      content:"＋"; /* ラベルのアイコン */
+      font-family: $font-big;
+      font-size: 22px;
+      color: $blue;
+      position: absolute;
+      top: 50%;
+      right: 15px;
+      margin-top: -14px;
+      @include mq(md) {
+        right: 25px;
+      }
+    }
+  }
+  input{
+    display: none;
+    &:checked ~ label::after {
+      content:"－"; /* ラベルをクリックした後のアイコン */
+    }
+    &:checked ~ div{
+      height: auto;
+      border-radius: 0px;
+      padding: 18px 50px 18px 50px;
+      opacity: 1;
+      position: relative;
+      &:before {
+        opacity: 1;
+      }
+
+      @include mq(md) {
+        padding: 22px 70px 22px 90px;
+      }
+    }
+
+    &:checked ~ label {
+    }
+  }
+  div{
+    height: 0px;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.3s; /* 開閉スピードの設定 */
+
+  }
+
+  .acbox-under{
+    font-size: 15px; /* 開いた部分の文字サイズ */
+    line-height: 1.6em;
+    background: white;
+    p {
+      margin: 0;
+    }
+    &:before{
+      content:''; /* ラベルのアイコン */
+      width: 20px;
+      height: 20px;
+      background: url('../img/icon-a.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      position: absolute;
+      top: 20px;
+      left: 15px;
+      opacity: 0;
+      transition: .3s;
+      @include mq(md) {
+        width: 25px;
+        height: 25px;
+        top: 22px;
+        left: 34px;
+      }
+    }
+  }
+}
+
+.acbox + .acbox {
+  border-top: none;
+}

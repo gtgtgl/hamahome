@@ -22,9 +22,14 @@
       pointer-events: all;
     }
 
-    nav.main-navigation, div.menu_company {
+    nav.main-navigation {
       max-width: $max-width;
       margin: auto;
+    }
+
+    div.menu_company {
+      max-width: $max-width;
+      margin: 60px auto;
     }
 
     @include mq(lg) {
