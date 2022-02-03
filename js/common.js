@@ -109,4 +109,4 @@ var bottomPoint = bodyHeight - windowHeight // ページ最下部までスクロ
   } else {
     flowbtn.classList.remove('is-scrollEnd')
   }
-})
+});

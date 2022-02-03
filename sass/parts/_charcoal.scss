@@ -2,35 +2,8 @@ section#charcoal-sec01 {
     background: #F3F4F5;
     padding: 40px 0;
 
-    ul.ul_charcoal {
-        display: flex;
-        flex-wrap: wrap;
-        max-width: 450px;
-        margin: auto;
-
-        @include mq(lg) {
-            max-width: 750px;
-        }
-        
-        li {
-            padding-left: 35px;
-            position: relative;
-            font-weight: bold;
-            width: 100%;
-            margin-bottom: 8px;
-
-            &:before {
-                content: '';
-                display: block;
-                background: url('../img/check.svg');
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: contain;
-                width: 26px;
-                height: 28px;
-                position: absolute;
-                left: 0;
-            }
+    ul.ul_check {
+        li  {
 
             @include mq(lg) {
                 font-size: 17px;
@@ -97,7 +70,14 @@ section#charcoal-sec02 {
         text-align: left;
     }
 }
-section#charcoal-sec03 {
+
+.charcoal-gray {
     background: #F3F4F5;
     padding: 40px 0;
+
+    h3 {
+        font-size: 18px;
+        color: $text-color;
+        margin-bottom: 5px;
+    }
 }
