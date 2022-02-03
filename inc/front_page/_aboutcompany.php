@@ -5,13 +5,13 @@
 
             <div class="flex flex-center mt60 max900">
                 <div class="col-sm8 col-md6">
-                    <a href="#" class="banner">
+                    <a href="<?php echo esc_url( home_url( '/company' ) ); ?>" class="banner">
                             <img src="<?php echo get_template_directory_uri(); ?>/img/banner05.jpg" alt="会社案内">
                     </a>
                 </div>
 
                 <div class="col-sm8 col-md6">
-                    <a href="#" class="banner">
+                    <a href="<?php echo esc_url( home_url( '/staff' ) ); ?>" class="banner">
                             <img src="<?php echo get_template_directory_uri(); ?>/img/banner06.jpg" alt="スタッフ紹介">
                     </a>
                 </div>
