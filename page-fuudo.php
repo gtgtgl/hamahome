@@ -81,11 +81,11 @@ $slug = $page->post_name;
 
             <div class="col-7 col-md6 col-lg3">
                     <div>
-                <img src="<?php echo get_template_directory_uri(); ?>/img/title01.png" alt="炭の力" width="200">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/title01.png" alt="パネル工法" width="200">
                     </div>
                 <div class="img">
                     <div>
-                <img src="<?php echo get_template_directory_uri(); ?>/img/icon01.png" alt="炭の力" width="130">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/icon01.png" alt="パネル工法" width="130">
                     </div>
                 </div>
                 <p class="s">テキストが入ります。テキストが入ります。テキストが入ります。</p>
@@ -94,11 +94,11 @@ $slug = $page->post_name;
 
             <div class="col-7 col-md6 col-lg3">
                     <div>
-                <img src="<?php echo get_template_directory_uri(); ?>/img/title02.png" alt="パネル工法" width="200">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/title02.png" alt="炭の力" width="200">
                     </div>
                 <div class="img">
                     <div>
-                <img src="<?php echo get_template_directory_uri(); ?>/img/icon02.png" alt="パネル工法" width="130">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/icon02.png" alt="炭の力" width="130">
                     </div>
                 </div>
                 <p class="s">床下に炭を吊るすことで、大切な家を湿気やシロアリ、カビから守ってくれます。</p>
