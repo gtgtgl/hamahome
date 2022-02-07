@@ -35,7 +35,7 @@ function get_my_archive_slug() {
   elseif(is_author()): /* 投稿者 */
 	  return 'author';
   elseif(is_tag()): /* タグ */
-    return 'tag';
+    return 'post_tag';
   elseif(is_category()): /* カテゴリー */
     $wp_obj = get_queried_object();
     $slug   = $wp_obj->slug;
