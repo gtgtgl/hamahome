@@ -2,43 +2,77 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+<?php
+$title = get_my_archive_title();
+$slug  = get_my_archive_slug();
+?>
+	
+<main id="primary" class="<?php echo $slug; ?>">
+		
+	<div id="page_topimg" class="<?php echo 'page_' . $slug; ?>">
+		<h1>
+			<?php echo $title; ?>
+		</h1>
+	</div>
 
-		<?php
-		if ( have_posts() ) :
+	<?php
+	get_template_part( 'inc/_breadcrumb' );
+	?>
 
-			if ( is_home() && ! is_front_page() ) :
-				?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-				<?php
-			endif;
+    <section>
+      <div class="container">
 
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+				<ul class="post_items">
 
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_type() );
+					<?php
+					while ( have_posts() ) :
+						the_post();
+					?>
 
-			endwhile;
+						<li class="post_item">
+							<header class="post_item_header">
+								<div class="post_item_date"><?php the_time( 'Y.m.d' ); ?></div>
+									<?php $tags = get_the_category($post->ID); ?>
+                	<?php if ( $tags ): ?>
+                    <ul class="post_item_cats">
+                      <?php foreach ( $tags as $tag ) : ?>
+												<li class="post_item_cat">
+													<a href="<?php echo get_tag_link( $tag->term_id ); ?>">
+														<?php echo $tag->name; ?>
+													</a>
+												</li> 
+											<?php endforeach; ?>
+                    </ul>
+                  <?php endif; ?>
+							</header>
+							<div class="post_item_content">
+								<figure class="post_item_image">
+									<a href="<?php the_permalink(); ?>">
+										<?php if (has_post_thumbnail()) : ?>
+											<?php the_post_thumbnail('medium'); ?>
+										<?php endif; ?>
+									</a>
+								</figure>
+								<h2 class="post_item_heading">
+									<?php echo the_title(); ?>
+								</h2>
+								<div class="post_item_excerpt">
+									<?php echo the_excerpt(); ?>
+									<p class="post_item_more"><a href="<?php the_permalink(); ?>">続きを読む</a></p>
+								</div>
+							</div>
+						</li>
 
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
-		?>
+					<?php
+					endwhile; // End of the loop.
+					?>
+				
+				</ul>
+				
+			</div>
+		</section>
 
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
 get_footer();

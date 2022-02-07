@@ -1,40 +1,40 @@
 <?php
-/**
- * The template for displaying all single posts
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
- *
- * @package hamahome
- */
-
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+<?php
+$page = get_post( get_the_ID() );
+$slug = $page->post_name;
+?>
+	
+<main id="primary" class="<?php echo $slug ?>">
+		
+	<div id="page_topimg" class="page_default">
+		<h1>
+			<?php the_title(); ?>
+		</h1>
+	</div>
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
+	<?php
+	get_template_part( 'inc/_breadcrumb' );
+	?>
 
-			get_template_part( 'template-parts/content', get_post_type() );
+    <section>
+      <div class="container">
 
-			the_post_navigation(
-				array(
-					'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'hamahome' ) . '</span> <span class="nav-title">%title</span>',
-					'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'hamahome' ) . '</span> <span class="nav-title">%title</span>',
-				)
-			);
+				<?php
+				while ( have_posts() ) :
+					the_post();
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
+					the_content();
 
-		endwhile; // End of the loop.
-		?>
+				endwhile; // End of the loop.
+				?>
+				
+			</div>
+		</section>
 
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
 get_footer();
