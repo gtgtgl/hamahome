@@ -101,7 +101,7 @@ $slug = $page->post_name;
     <section id="reform_content">
 
     <?php 
-
+    // コンテンツデータ
     $array = array (
         '01' => array(
             'name' => '<span>１</span>屋根',
