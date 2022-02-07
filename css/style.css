@@ -2491,6 +2491,12 @@ div#page_topimg h1 {
     font-size: 30px;
   }
 }
+div#page_topimg.page_default {
+  background-image: url('../img/image-top.jpg');
+}
+div#page_topimg.page_default h1 {
+  color: #333333;
+}
 div#page_topimg.page_company {
   background-image: url("../img/company/header.jpg");
 }

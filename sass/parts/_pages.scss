@@ -27,6 +27,14 @@ div#page_topimg {
             font-size: 30px;
         }
     }
+    
+    &.page_defaut {
+        background-image: url('../img/image-top.jpg');
+
+        h1 {
+            color: $black;
+        }
+    }
 
     &.page_company {
         background-image: url('../img/company/header.jpg');
