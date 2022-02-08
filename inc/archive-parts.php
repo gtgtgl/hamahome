@@ -27,22 +27,28 @@ function get_my_archive_title() {
 
 function get_my_archive_slug() {
   if(is_search()):  /* 検索結果 */
-		return 'search';
+		//return 'search';
+    return 'default';
   elseif(is_404()): /* 404 */
-	  return '404';
+	  //return '404';
+    return 'default';
   elseif(is_date()): /* 日付アーカイブ */
-    return 'date';
+    //return 'date';
+    return 'default';
   elseif(is_author()): /* 投稿者 */
-	  return 'author';
+	  //return 'author';
+    return 'default';
   elseif(is_tag()): /* タグ */
-    return 'post_tag';
+    //return 'post_tag';
+    return 'default';
   elseif(is_category()): /* カテゴリー */
     $wp_obj = get_queried_object();
     $slug   = $wp_obj->slug;
     if($slug === 'president' || $slug === 'staff' || $slug === 'news'):
       return $wp_obj->slug;
     else:
-      return 'category';
+      //return 'category';
+      return 'default';
     endif; 
   elseif(is_post_type_archive()): /* カスタム投稿アーカイブ */
     $wp_obj = get_queried_object();
