@@ -28,12 +28,28 @@ div#page_topimg {
         }
     }
     
-    &.page_defaut {
+    &.page_default {
         background-image: url('../img/image-top.jpg');
 
         h1 {
             color: $black;
         }
+    }
+
+    &.page_news {
+        background-image: url('../img/archives/header_news.jpg');
+    }
+
+    &.page_president {
+        background-image: url('../img/archives/header_president.jpg');
+    }
+
+    &.page_staff {
+        background-image: url('../img/archives/header_staff.jpg');
+    }
+
+    &.page_construction {
+        background-image: url('../img/archives/header_construction.jpg');
     }
 
     &.page_company {

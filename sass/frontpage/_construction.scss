@@ -96,7 +96,8 @@ section#top_construction {
 }
 
 a.construction_item {
-    width: calc((100% - 60px) / 4);
+    //width: calc((100% - 60px) / 4);
+    width: 216px;
     display: block;
     background: white;
     color: $text-color;

@@ -1,7 +1,23 @@
 .post_items {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: stretch;
+  margin: 0;
+
+  .construction_item {
+    height: 100%;
+    border: 1px solid #ccc;
+  }
+}
+
+.select_wrap {
+  select {
+    display: block;
+    width: clamp(240px, 75%, 480px);
+    height: 2.8em;
+    margin: 0 auto 60px;
+  }
 }
 
 .post_item {

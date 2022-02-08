@@ -141,6 +141,7 @@ function hamahome_scripts() {
 	wp_style_add_data( 'hamahome-style', 'rtl', 'replace' );
 
 	wp_enqueue_script('jquery');
+	wp_enqueue_script( 'hamahome-select', get_template_directory_uri() . '/js/select.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'hamahome-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'hamahome-common', get_template_directory_uri() . '/js/common.js', array(), _S_VERSION, true );
 
