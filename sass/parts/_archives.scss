@@ -1,7 +1,13 @@
 .post_items {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: stretch;
+
+  .construction_item {
+    height: 100%;
+    border: 1px solid #ccc;
+  }
 }
 
 .post_item {

@@ -1576,7 +1576,7 @@ section#top_construction div.construction_wrap div.construction_item_container {
 }
 
 a.construction_item {
-  width: calc((100% - 60px) / 4);
+  width: 216px;
   display: block;
   background: white;
   color: #333333;
@@ -2229,9 +2229,16 @@ section#photo p {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.post_items .construction_item {
+  height: 100%;
+  border: 1px solid #ccc;
 }
 
 .post_item {
