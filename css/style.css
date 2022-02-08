@@ -2234,11 +2234,19 @@ section#photo p {
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
+  margin: 0;
 }
 
 .post_items .construction_item {
   height: 100%;
   border: 1px solid #ccc;
+}
+
+.select_wrap select {
+  display: block;
+  width: clamp(240px, 75%, 480px);
+  height: 2.8em;
+  margin: 0 auto 60px;
 }
 
 .post_item {
