@@ -2,24 +2,6 @@
 
 if ( !defined( 'ABSPATH' ) ) exit;
 
-
-// 投稿からタグを削除
-function hamahome_unregister_taxonomies()
-{
-    global $wp_taxonomies;
-    if (!empty($wp_taxonomies['post_tag']->object_type)) {
-        foreach ($wp_taxonomies['post_tag']->object_type as $i => $object_type) {
-            if ($object_type == 'post') {
-                unset($wp_taxonomies['post_tag']->object_type[$i]);
-            }
-        }
-    }
- 
-    return true;
-}
- 
-add_action('init', 'hamahome_unregister_taxonomies');
-
 // let's create the function for the custom type
 function custom_post_example() {
 
