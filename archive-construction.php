@@ -24,11 +24,14 @@ $slug  = 'construction';
 
         <div class="select_wrap">
           <select id="select_category">
-            <option value="" selected>カテゴリーを選択</option>
+            <option value="">カテゴリーを選択</option>
             <?php
-            $terms = get_terms('construction_cat');
+            $wp_obj = get_queried_object();
+            $slug   = $wp_obj->slug;
+            $terms  = get_terms( 'construction_cat' );
             foreach ( $terms as $term ) {
-              echo '<option value="'.get_term_link($term).'">'.$term->name.'</option>';
+              $is_selected = ( $slug === $term->slug ) ? 'selected' : '';
+              echo '<option value="' . get_term_link( $term ) . '"' . $is_selected . '>' . $term->name . '</option>';
             }
             ?>
           </select>
