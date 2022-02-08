@@ -36,6 +36,22 @@ div#page_topimg {
         }
     }
 
+    &.page_news {
+        background-image: url('../img/archives/header_news.jpg');
+    }
+
+    &.page_president {
+        background-image: url('../img/archives/header_president.jpg');
+    }
+
+    &.page_staff {
+        background-image: url('../img/archives/header_staff.jpg');
+    }
+
+    &.page_construction {
+        background-image: url('../img/archives/header_construction.jpg');
+    }
+
     &.page_company {
         background-image: url('../img/company/header.jpg');
     }
