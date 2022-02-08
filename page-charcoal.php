@@ -138,7 +138,7 @@ $slug = $page->post_name;
             <input id="qa01" type="checkbox">
             <label for="qa01">ハマホームの炭ってどんなの？</label>
             <div class="acbox-under">
-                <p>工事中に出た木材の切れ端を自社製炭所で、炭にしています。</p>
+                <p>工事中に出た木材の切れ端を自社製炭所で、炭にしています。<br>ハマホームの炭は、除湿、消臭の効果の高い「<strong>黒炭</strong>」を使用しています。</p>
             </div>
         </div>
     
@@ -146,7 +146,7 @@ $slug = $page->post_name;
             <input id="qa02" type="checkbox">
             <label for="qa02">燃えないの？</label>
             <div class="acbox-under">
-                <p>回答</p>
+                <p>製炭機にて木材の揮発成分を燃焼除去しているため燃えにくく、<strong>着火源となる心配はありません</strong>。</p>
             </div>
         </div>
     
@@ -154,7 +154,10 @@ $slug = $page->post_name;
             <input id="qa03" type="checkbox">
             <label for="qa03">どのくらいの期間使えるの？</label>
             <div class="acbox-under">
-                <p>回答</p>
+                <p>
+                炭には<strong>吸湿性</strong>と<strong>放湿性</strong>の両方があります。<br>
+                春〜夏は、じめじめした空気を吸い込みます。秋〜冬になるとまわりの空気が乾燥してくるので、持っている水分を放出します。このサイクルが<strong>半永久的に持続します</strong>。ですから、一度施工してしまえば、<strong>メンテナンスフリーで家を快適に保ってくれます</strong>。
+                </p>
             </div>
         </div>
     
@@ -162,7 +165,10 @@ $slug = $page->post_name;
             <input id="qa04" type="checkbox">
             <label for="qa04">どうして床下にいれるの？</label>
             <div class="acbox-under">
-                <p>回答</p>
+                <p>
+                一番湿気のたまりやすい所が床下なのです。<br>
+                ハマホームの家は、床下から空気を入れて、壁の中を通して小屋裏から外に出しています。ですから、最初に入ってくる床下で空気を変えているのです。きれいで快適な空気が家の中を通っているんですね！
+                </p>
             </div>
         </div>
     
@@ -170,7 +176,9 @@ $slug = $page->post_name;
             <input id="qa05" type="checkbox">
             <label for="qa05">どれくらいの量を入れるの？</label>
             <div class="acbox-under">
-                <p>回答</p>
+                <p>
+                <strong>1坪あたり6袋</strong>を目安に、床の下地材の乗木に炭袋を吊るします。1袋約1kgなので、<strong>1坪（畳2帖分）あたり6kg</strong>も入っているんですね！
+                </p>
             </div>
         </div>
 
@@ -182,7 +190,7 @@ $slug = $page->post_name;
         </p>
 
         <p class="center mt30">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/fuudo/charcoal/img07.jpg" alt="自社オリジナルの炭を使用！" width="700">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/fuudo/charcoal/img07.jpg" alt="自社オリジナルの炭を使用！" width="500">
         </p>
 
     </div>
