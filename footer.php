@@ -62,7 +62,7 @@
 				<h4>家づくりについて</h4>
 				<ul class="footer-sitemap">
 					<li><a href="#">家づくりの流れ</a></li>
-					<li><a href="#">リフォーム</a></li>
+					<li><a href="<?php echo esc_url( home_url( '/reform' ) ); ?>">リフォーム</a></li>
             		<li><a href="<?php echo esc_url( home_url( '/warranty' ) ); ?>">住宅あんしん保証</a></li>
 					<li><a href="#">お困りごと</a></li>
 				</ul>

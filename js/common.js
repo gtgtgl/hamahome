@@ -19,12 +19,6 @@ menubtn.addEventListener('click', openMenu);
 closebtn.addEventListener('click', openMenu);
 
 // タブ実装
-const tabNews = document.getElementById('tab_news');
-const tabPresident = document.getElementById('tab_president');
-const tabStaff = document.getElementById('tab_staff');
-const contentNews = document.getElementById('content_news');
-const contentPresident = document.getElementById('content_president');
-const contentStaff = document.getElementById('content_staff');
 
 document.addEventListener('DOMContentLoaded', function(){
 	// タブに対してクリックイベントを適用
@@ -43,6 +37,11 @@ document.addEventListener('DOMContentLoaded', function(){
 		const arrayTabs = Array.prototype.slice.call(tabs);
 		const index = arrayTabs.indexOf(this);
 		document.getElementsByClassName('panel')[index].classList.add('is-show');
+    
+    if(document.getElementById("reform_content") != null) {
+      var reformContent = document.getElementById('reform_content');
+      reformContent.scrollIntoView({behavior: "smooth"});
+    }
 	};
 }, false);
 
