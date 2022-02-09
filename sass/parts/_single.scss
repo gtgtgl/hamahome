@@ -1,3 +1,36 @@
+.construction_info {
+  display: flex;
+  flex-wrap: wrap;
+
+  .construction_name {
+    width: fit-content;
+    margin: 0;
+    font-weight: 700;
+    line-height: 2;
+  }
+
+  .construction_cats {
+    margin: 0 6px;
+    line-height: 2;
+  }
+
+  .construction_cat {
+    display: inline-block;
+    margin: 0 6px;
+    padding: 0 3px;
+    border: 1px solid #0059B3;
+
+    a {
+      display: block;
+      color: #0059B3;
+
+      &:hover {
+        opacity: .6;
+      }
+    }
+  }
+}
+
 a.back_btn {
   &:hover {
     color: $white;

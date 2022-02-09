@@ -3365,6 +3365,44 @@ div#page_topimg.page_warranty {
   transform: translateY(-50%);
 }
 
+.construction_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.construction_info .construction_name {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0;
+  font-weight: 700;
+  line-height: 2;
+}
+
+.construction_info .construction_cats {
+  margin: 0 6px;
+  line-height: 2;
+}
+
+.construction_info .construction_cat {
+  display: inline-block;
+  margin: 0 6px;
+  padding: 0 3px;
+  border: 1px solid #0059B3;
+}
+
+.construction_info .construction_cat a {
+  display: block;
+  color: #0059B3;
+}
+
+.construction_info .construction_cat a:hover {
+  opacity: .6;
+}
+
 a.back_btn:hover {
   color: #ffffff;
   opacity: .6;
