@@ -34,7 +34,28 @@ get_header();
 			</article>
 
 			<aside class="col-lg3">
-				<?php dynamic_sidebar( 'sidebar-1' ); ?>
+				<?php
+				if (is_singular('construction')) :
+					$tags = get_terms( [ 'taxonomy' => 'construction_cat' ] );
+          if ( $tags ): ?>
+						<div class="widget_block">
+							<h2>カテゴリー</h2>
+							<ul>
+								<?php foreach ( $tags as $tag ) : ?>
+									<li>
+										<a href="<?php echo get_tag_link( $tag->term_id ); ?>">
+											<?php echo $tag->name; ?>
+										</a>
+									</li> 
+								<?php endforeach; ?>
+							</ul>
+						</div>
+				<?php 
+					endif;
+				else:
+					dynamic_sidebar( 'sidebar-1' );
+				endif;
+				?>
 			</aside>
 				
 		</div>
