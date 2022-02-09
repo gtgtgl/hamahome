@@ -1,38 +1,43 @@
 <?php
 get_header();
 ?>
-
-<?php
-$page = get_post( get_the_ID() );
-$slug = $page->post_name;
-?>
 	
-<main id="primary" class="<?php echo $slug ?>">
-		
-	<div id="page_topimg" class="page_default">
-		<h1>
-			<?php the_title(); ?>
-		</h1>
-	</div>
+<main id="primary" class="single_post">
 
 	<?php
 	get_template_part( 'inc/_breadcrumb' );
 	?>
 
-    <section>
-      <div class="container">
+		<div class="container flex flex-around">
 
+			<article class="col-lg8">
 				<?php
 				while ( have_posts() ) :
 					the_post();
 
+					if (has_post_thumbnail()) :
+				?>
+					<figure class="post_item_image">
+						<?php the_post_thumbnail('large'); ?>
+					</figure>
+				<?php
+					endif;
+				?>
+					<h2 class="post_item_heading">
+						<?php the_title(); ?>
+					</h2>
+				<?php
 					the_content();
 
 				endwhile; // End of the loop.
 				?>
+			</article>
+
+			<aside class="col-lg3">
+				<?php dynamic_sidebar( 'sidebar-1' ); ?>
+			</aside>
 				
-			</div>
-		</section>
+		</div>
 
 	</main><!-- #main -->
 

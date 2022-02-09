@@ -28,6 +28,14 @@ Flexbox設定
   justify-content: center;
 }
 
+.flex-around {
+  justify-content: space-around;
+}
+
+.flex-between {
+  justify-content: space-between;
+}
+
 .center {
   text-align: center;
 }

@@ -8,4 +8,12 @@ main {
     @include mq(lg) {
         margin-top: $header-height;
     }
+
+    &.single_post {
+        padding-top: $header-height-sp * 2;
+
+        @include mq(lg) {
+            margin-top: $header-height * 2;
+        }
+    }
 }
