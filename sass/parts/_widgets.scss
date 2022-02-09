@@ -1,0 +1,31 @@
+.widget_block {
+  margin: 20px auto 60px;
+  padding: 20px;
+  border: 1px solid #ccc;
+
+  h2 {
+    margin: 0;
+    font-family: $font-normal;
+    font-size: 20px;
+    text-align: left;
+  }
+
+  ul {
+    li {
+      &::before {
+        content: ">";
+        padding: 0 10px;
+        font-family: cursive;
+      }
+
+      a {
+        color: $black;
+        transition: 0.3s;
+
+        &:hover {
+          color: $link-hover;
+        }
+      }
+    }
+  }
+}

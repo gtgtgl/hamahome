@@ -1236,7 +1236,7 @@ main {
 }
 
 main.single_post {
-  padding-top: 106px;
+  margin-top: 106px;
 }
 
 @media (min-width: 1030px) {
@@ -2327,6 +2327,7 @@ section#photo p {
 .post_item_heading {
   margin: 20px 0;
   text-align: left;
+  font-family: YuGothic, "Yu Gothic", "ヒラギノ角ゴシック", "Hiragino Sans", sans-serif;
   font-size: 21px;
 }
 
@@ -3555,4 +3556,33 @@ table th {
 section.bg_purple {
   background: #E8E7F0;
   padding: 40px 0;
+}
+
+.widget_block {
+  margin: 20px auto 60px;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+.widget_block h2 {
+  margin: 0;
+  font-family: YuGothic, "Yu Gothic", "ヒラギノ角ゴシック", "Hiragino Sans", sans-serif;
+  font-size: 20px;
+  text-align: left;
+}
+
+.widget_block ul li::before {
+  content: ">";
+  padding: 0 10px;
+  font-family: cursive;
+}
+
+.widget_block ul li a {
+  color: #333333;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.widget_block ul li a:hover {
+  color: #ffb328;
 }
