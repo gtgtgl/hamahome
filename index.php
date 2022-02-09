@@ -50,6 +50,8 @@ $slug  = get_my_archive_slug();
 									<a href="<?php the_permalink(); ?>">
 										<?php if (has_post_thumbnail()) : ?>
 											<?php the_post_thumbnail('medium'); ?>
+										<?php else : ?>
+											<img src="<?php echo get_template_directory_uri(); ?>/img/noimage.jpg" alt="<?php the_title(); ?>">
 										<?php endif; ?>
 									</a>
 								</figure>
