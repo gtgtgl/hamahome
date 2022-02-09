@@ -3365,6 +3365,11 @@ div#page_topimg.page_warranty {
   transform: translateY(-50%);
 }
 
+a.back_btn:hover {
+  color: #ffffff;
+  opacity: .6;
+}
+
 main.staff .staff_card {
   max-width: 400px;
   margin: auto;
