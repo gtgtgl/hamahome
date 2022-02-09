@@ -31,11 +31,31 @@ get_header();
 
 				endwhile; // End of the loop.
 				?>
+
+				<?php
+				$wp_obj = get_queried_object();
+				if ( is_singular( 'construction' ) ) :
+					$post_type = 'construction';
+					$text = get_post_type_object( $post_type )->label;
+					$link = get_post_type_archive_link( $post_type );
+				else :
+					$categories = get_the_category( $wp_obj->ID );
+					$cat = $categories[ 0 ]->term_id;
+					$text = get_cat_name( $cat );
+					$link = get_category_link( $cat );
+
+				endif;
+				?>
+				
+				<div class="back_btn_wrap">
+					<a class="back_btn btn-02" href="<?php echo $link; ?>"><?php echo $text; ?> 一覧へ戻る</a>
+				</div>
+
 			</article>
 
 			<aside class="col-lg3">
 				<?php
-				if (is_singular('construction')) :
+				if (is_singular( 'construction' )) :
 					$tags = get_terms( [ 'taxonomy' => 'construction_cat' ] );
           if ( $tags ): ?>
 						<div class="widget_block">
