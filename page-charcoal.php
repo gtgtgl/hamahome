@@ -267,7 +267,7 @@ $slug = $page->post_name;
                     </div>
                 </div>
                 <p class="s">柱の外側から断熱材を貼付ける外断熱工法です。</p>
-                <a href="#" class="btn-01">もっと詳しく</a>
+                <a href="<?php echo esc_url( home_url( '/fuudo/eco' ) ); ?>" class="btn-01">もっと詳しく</a>
             </div>
 
             <div class="col-7 col-md4">
@@ -280,7 +280,7 @@ $slug = $page->post_name;
                     </div>
                 </div>
                 <p class="s">柱材は１本の木から１本しかとれない柱（芯持ち材）を使っています。</p>
-                <a href="#" class="btn-01">もっと詳しく</a>
+                <a href="<?php echo esc_url( home_url( '/fuudo/wood' ) ); ?>" class="btn-01">もっと詳しく</a>
             </div>
 
             <div class="col-7 col-md4">
@@ -293,7 +293,7 @@ $slug = $page->post_name;
                     </div>
                 </div>
                 <p class="s">テキストが入りますテキストが入りますテキストが入りますテキストが入ります</p>
-                <a href="#" class="btn-01">もっと詳しく</a>
+                <a href="<?php echo esc_url( home_url( '/fuudo/panel' ) ); ?>" class="btn-01">もっと詳しく</a>
             </div>
 
         </div>

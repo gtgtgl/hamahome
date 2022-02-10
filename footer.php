@@ -53,8 +53,8 @@
 			<div class="col-6 col-md4 col-xl2">
 				<h4>事例紹介</h4>
 				<ul class="footer-sitemap">
-					<li><a href="#">施工事例</a></li>
-					<li><a href="#">目で見る写真</a></li>
+					<li><a href="<?php echo get_post_type_archive_link( 'construction' ); ?>">施工事例</a></li>
+					<li><a href="https://www.instagram.com/hamahome.fukui/?hl=ja" target="_blank">目で見る写真</a></li>
 				</ul>
 			</div>
 
@@ -71,17 +71,17 @@
 			<div class="col-6 col-md4 col-xl3">
 				<h4>福井の風土に合う家</h4>
 				<ul class="footer-sitemap">
-					<li><a href="#">パネル工法</a></li>
+					<li><a href="<?php echo esc_url( home_url( '/fuudo/panel' ) ); ?>">パネル工法</a></li>
 					<li><a href="<?php echo esc_url( home_url( '/fuudo/charcoal' ) ); ?>">炭の力</a></li>
-					<li><a href="#">省エネの断熱</a></li>
-					<li><a href="#">木へのこだわり</a></li>
+					<li><a href="<?php echo esc_url( home_url( '/fuudo/eco' ) ); ?>">省エネの断熱</a></li>
+					<li><a href="<?php echo esc_url( home_url( '/fuudo/wood' ) ); ?>">木へのこだわり</a></li>
 				</ul>
 			</div>
 		</div>
 		</div>
 	</div><!-- .site-info -->
 
-	<div id="copyright">
+	<div class="copyright">
 		<div class="container flex">
 			<ul class="menu-footer">
 				<li>

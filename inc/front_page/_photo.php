@@ -6,6 +6,6 @@
         テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
         </p>
 
-        <a href="#" class="btn-01">Instagram</a>
+        <a href="https://www.instagram.com/hamahome.fukui/?hl=ja" class="btn-01" target="_blank">Instagram</a>
     </div>
 </section>

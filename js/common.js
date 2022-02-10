@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function(){
 		const index = arrayTabs.indexOf(this);
 		document.getElementsByClassName('panel')[index].classList.add('is-show');
     
-    if(document.getElementById("reform_content") != null) {
+    if(document.getElementById("reform_content") != null && window.matchMedia('(max-width: 767px)').matches) {
       var reformContent = document.getElementById('reform_content');
       reformContent.scrollIntoView({behavior: "smooth"});
     }

@@ -48,6 +48,18 @@
         <p>
           【事業内容】新築 リフォーム 不動産 店舗改装 製炭
         </p>
+
+        <div class="copyright">
+          <div class="container flex">
+            <ul class="menu-footer">
+              <li>
+                <a href="#">プライバシーポリシー</a>
+              </li>
+            </ul>
+            <p>Copyright © 2021 Hama Home.</p>
+          </div>
+      </div>
+        
       </div>
   
     </div>

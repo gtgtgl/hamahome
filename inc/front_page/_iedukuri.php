@@ -14,18 +14,18 @@
                 </a>
             </div>
             <div class="col-sm8 col-md6">
-                <a href="#" class="banner">
+                <a href="<?php echo esc_url( home_url( '/reform' ) ); ?>" class="banner">
                         <img src="<?php echo get_template_directory_uri(); ?>/img/banner02.jpg" alt="リフォーム">
                 </a>
             </div>
             <div class="col-sm8 col-md6">
-                <a href="#" class="banner">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/banner03.jpg" alt="夏は涼しく快適に">
+                <a href="<?php echo esc_url( home_url( '/warranty' ) ); ?>" class="banner">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/banner03.jpg" alt="住宅あんしん保証">
                 </a>
             </div>
             <div class="col-sm8 col-md6">
                 <a href="#" class="banner">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/banner04.jpg" alt="夏は涼しく快適に">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/banner04.jpg" alt="お困りごと">
                 </a>
             </div>
         </div>

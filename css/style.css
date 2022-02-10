@@ -1276,29 +1276,29 @@ footer.site-footer .site-info ul.footer-sitemap li a:before {
   left: 8px;
 }
 
-div#copyright {
+div.copyright {
   background: #C3E7E3;
   padding: 17px 0;
 }
-div#copyright p {
+div.copyright p {
   font-size: 13px;
   margin: 0 auto;
 }
 @media (min-width: 768px) {
-  div#copyright p {
+  div.copyright p {
     margin: 0 0 0 auto;
   }
 }
-div#copyright .flex {
+div.copyright .flex {
   justify-content: center;
 }
 @media (min-width: 768px) {
-  div#copyright .flex {
+  div.copyright .flex {
     flex-direction: row;
     justify-content: space-between;
   }
 }
-div#copyright ul.menu-footer {
+div.copyright ul.menu-footer {
   display: none;
   margin: 0;
   height: 17px;
@@ -1306,21 +1306,21 @@ div#copyright ul.menu-footer {
   border-left: 1px solid #333333;
 }
 @media (min-width: 768px) {
-  div#copyright ul.menu-footer {
+  div.copyright ul.menu-footer {
     display: flex;
   }
 }
-div#copyright ul.menu-footer li {
+div.copyright ul.menu-footer li {
   border-right: 1px solid #333333;
 }
-div#copyright ul.menu-footer li a {
+div.copyright ul.menu-footer li a {
   display: block;
   color: #333333;
   height: 17px;
   padding: 2px 15px;
   line-height: 1;
 }
-div#copyright ul.menu-footer li a:hover {
+div.copyright ul.menu-footer li a:hover {
   opacity: 0.6;
 }
 
@@ -1388,6 +1388,7 @@ section#top_about a.banner02 .text p.title {
 
 section#top_construction {
   background: #EDF8F7;
+  padding: 40px 0 80px;
 }
 section#top_construction div.container {
   position: relative;
@@ -1722,10 +1723,15 @@ a.banner:hover img {
 }
 
 section#photo {
-  background: url(../img/bg02.jpg);
+  background-image: url(../img/bg02-sp.jpg);
   background-position: center;
   background-repeat: repeat-x;
   background-size: cover;
+}
+@media (min-width: 768px) {
+  section#photo {
+    background-image: url(../img/bg02.jpg);
+  }
 }
 section#photo h2 {
   color: #ffffff;
@@ -2237,6 +2243,113 @@ main.company section.googlemap iframe {
   width: 100%;
 }
 
+.eco .has-circle {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  position: relative;
+}
+.eco .has-circle .circle {
+  position: absolute;
+  background: #45B5A9;
+  width: 100px;
+  height: 100px;
+  bottom: -20px;
+  right: -20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+}
+.eco .has-circle .circle p {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 1.6em;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.flow .flow_wrap {
+  max-width: 750px;
+  margin: 0 auto;
+}
+.flow .flow_wrap.month {
+  position: relative;
+}
+.flow .flow_wrap.month:before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 25px;
+  border: 1px solid black;
+  border-right: none;
+  position: absolute;
+  left: -30px;
+}
+.flow .flow_wrap.month:after {
+  content: "１～２ヶ月";
+  display: block;
+  background: #EAEAEA;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 32px;
+  position: absolute;
+  margin: auto;
+  left: -48px;
+  top: 0;
+  bottom: 0;
+  -ms-writing-mode: tb-rl;
+      writing-mode: vertical-rl;
+  padding: 15px 4px;
+}
+.flow .flow_card {
+  background: #EDF8F7;
+  padding: 5px 15px;
+  margin: 20px auto;
+  display: flex;
+}
+.flow .flow_card:last-of-type {
+  margin-bottom: 0px;
+}
+.flow .flow_card .icon {
+  width: 100px;
+  margin-right: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flow .flow_card .text {
+  width: calc(100% - 115px);
+}
+.flow .flow_card .text p.title {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 18px;
+  line-height: 1;
+  margin: 10px 0 15px;
+}
+.flow .flow_card .text p.title span.number {
+  color: #45B5A9;
+  font-size: 35px;
+  vertical-align: text-bottom;
+  margin-right: 10px;
+  display: inline-block;
+}
+.flow .flow_card .text p.title span.orange {
+  color: #FF7E00;
+  font-family: YuGothic, "Yu Gothic", "ヒラギノ角ゴシック", "Hiragino Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  display: inline-block;
+  margin-left: 10px;
+}
+.flow .flow_card .text p.content {
+  font-size: 15px;
+  line-height: 1.8em;
+}
+
 /* -----------------------------------
 フローボタン
 ----------------------------------- */
@@ -2497,7 +2610,21 @@ ul.ul_check li:before {
 }
 #mobile_menu div.menu_company {
   max-width: 500px;
-  margin: 60px auto;
+  margin: 60px auto 0;
+}
+#mobile_menu div.menu_company .copyright {
+  background: transparent;
+}
+#mobile_menu div.menu_company .copyright .container {
+  flex-direction: column;
+}
+#mobile_menu div.menu_company .copyright ul.menu-footer {
+  display: flex;
+  margin: 0 0 60px;
+}
+#mobile_menu div.menu_company .copyright p {
+  width: 100%;
+  text-align: right;
 }
 @media (min-width: 1030px) {
   #mobile_menu {
@@ -3078,5 +3205,48 @@ table th {
 
 section.bg_purple {
   background: #E8E7F0;
+  padding: 40px 0;
+}
+
+.wood .has-circle {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  position: relative;
+}
+.wood .has-circle .circle {
+  position: absolute;
+  background: #45B5A9;
+  width: 100px;
+  height: 100px;
+  bottom: -20px;
+  left: -20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+}
+.wood .has-circle .circle p {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 1.6em;
+  text-align: center;
+  margin: 0 auto;
+}
+.wood .has-circle .circle--small {
+  width: 85px;
+  height: 85px;
+}
+.wood .has-circle .circle--small p {
+  font-size: 14px;
+  line-height: 1.4em;
+}
+.wood .has-circle .circle--small p small {
+  font-size: 13px;
+}
+
+section.bg_blue {
+  background: #EDF8F7;
   padding: 40px 0;
 }

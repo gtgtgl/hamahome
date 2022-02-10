@@ -23,7 +23,7 @@
       <li class="has-child"><a href="#">事例紹介</a>
         <ul>
             <li><a href="<?php echo get_post_type_archive_link( 'construction' ); ?>">施工事例</a></li>
-            <li><a href="#">目で見る写真</a></li>
+            <li><a href="https://www.instagram.com/hamahome.fukui/?hl=ja" target="_blank">目で見る写真</a></li>
         </ul>
       </li>
       <li class="has-child"><a href="#">家づくりについて</a>
@@ -36,10 +36,10 @@
       </li>
       <li class="has-child"><a href="<?php echo esc_url( home_url( '/fuudo' ) ); ?>">福井の風土に合う家</a>
         <ul>
-            <li><a href="#">パネル工法</a></li>
+            <li><a href="<?php echo esc_url( home_url( '/fuudo/panel' ) ); ?>">パネル工法</a></li>
             <li><a href="<?php echo esc_url( home_url( '/fuudo/charcoal' ) ); ?>">炭の力</a></li>
-            <li><a href="#">省エネの断熱</a></li>
-            <li><a href="#">木へのこだわり</a></li>
+            <li><a href="<?php echo esc_url( home_url( '/fuudo/eco' ) ); ?>">省エネの断熱</a></li>
+            <li><a href="<?php echo esc_url( home_url( '/fuudo/wood' ) ); ?>">木へのこだわり</a></li>
         </ul>
       </li>
     </ul>
