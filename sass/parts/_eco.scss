@@ -1,0 +1,30 @@
+.eco {
+    
+    .has-circle {
+        width: fit-content;
+        margin: 0 auto;
+        position: relative;
+
+        .circle {
+            $size: 100px;
+            position: absolute;
+            background: $blue;
+            width: $size;
+            height: $size;
+            bottom: -20px;
+            right: -20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+
+            p {
+                color: $white;
+                font-size: 15px;
+                font-weight: bold;
+                line-height: 1.6em;
+                text-align: center;
+                margin: 0 auto;
+            }
+        }
+    }
+}
