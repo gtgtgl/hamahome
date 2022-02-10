@@ -37,7 +37,7 @@
                 </div>
             </div>
 
-            <a href="#" class="btn-01">もっと詳しく</a>
+            <a href="<?php echo esc_url( home_url( '/fuudo' ) ); ?>" class="btn-01">もっと詳しく</a>
         </div>
         <!-- end of .season -->
 
@@ -53,7 +53,7 @@
                     </div>
                 </div>
                 <p class="s">テキストが入ります。テキストが入ります。テキストが入ります。</p>
-                <a href="#" class="btn-01">もっと詳しく</a>
+                <a href="<?php echo esc_url( home_url( '/fuudo/panel' ) ); ?>" class="btn-01">もっと詳しく</a>
             </div>
 
             <div class="col-7 col-md6 col-lg3">
@@ -66,7 +66,7 @@
                     </div>
                 </div>
                 <p class="s">床下に炭を吊るすことで、大切な家を湿気やシロアリ、カビから守ってくれます。</p>
-                <a href="#" class="btn-01">もっと詳しく</a>
+                <a href="<?php echo esc_url( home_url( '/fuudo/charcoal' ) ); ?>" class="btn-01">もっと詳しく</a>
             </div>
 
             <div class="col-7 col-md6 col-lg3">
@@ -79,7 +79,7 @@
                     </div>
                 </div>
                 <p class="s">柱の外側から断熱材を貼付ける外断熱工法です。</p>
-                <a href="#" class="btn-01">もっと詳しく</a>
+                <a href="<?php echo esc_url( home_url( '/fuudo/eco' ) ); ?>" class="btn-01">もっと詳しく</a>
             </div>
 
             <div class="col-7 col-md6 col-lg3">
@@ -92,7 +92,7 @@
                     </div>
                 </div>
                 <p class="s">柱材は１本の木から１本しかとれない柱（芯持ち材）を使っています。</p>
-                <a href="#" class="btn-01">もっと詳しく</a>
+                <a href="<?php echo esc_url( home_url( '/fuudo/wood' ) ); ?>" class="btn-01">もっと詳しく</a>
             </div>
 
         </div>

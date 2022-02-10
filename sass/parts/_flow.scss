@@ -1,0 +1,86 @@
+.flow {
+    .flow_wrap {
+        max-width: 750px;
+        margin: 0 auto;
+
+        &.month {
+            position: relative;
+
+            &:before {
+                content: '';
+                display: block;
+                height: 100%;
+                width: 25px;
+                border: 1px solid black;
+                border-right: none;
+                position: absolute;
+                left: -git bran30px;
+            }
+
+            &:after {
+                content: '１～２ヶ月';
+                display: block;
+                background: #EAEAEA;
+                height: fit-content;
+                width: 32px;
+                position: absolute;
+                margin: auto;
+                left: -48px;
+                top: 0;
+                bottom: 0;
+                writing-mode: vertical-rl;
+                padding: 15px 4px;
+            }
+        }
+    }
+
+    .flow_card {
+        background: $bgblue;
+        padding: 5px 15px;
+        margin: 20px auto;
+        display: flex;
+
+        &:last-of-type {
+            margin-bottom: 0px;
+        }
+
+        .icon {
+            width: 100px;
+            margin-right: 20px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .text {
+            width: calc(100% - 115px);
+            p.title {
+                font-family: $font-big;
+                font-size: 18px;
+                line-height: 1;
+                margin: 10px 0 15px;
+
+                span.number {
+                    color: $blue;
+                    font-size: 35px;
+                    vertical-align: text-bottom;
+                    margin-right: 10px;
+                    display: inline-block;
+                }
+
+                span.orange {
+                    color: $orange;
+                    font-family: $font-normal;
+                    font-size: 16px;
+                    font-weight: 700;
+                    display: inline-block;
+                    margin-left: 10px;
+                }
+            }
+            p.content {
+                font-size: 15px;
+                line-height: 1.8em;
+            }
+        }
+    }
+}

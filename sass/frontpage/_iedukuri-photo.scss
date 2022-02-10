@@ -26,10 +26,14 @@ a.banner {
 }
 
 section#photo {
-    background: url(../img/bg02.jpg);
+    background-image: url(../img/bg02-sp.jpg);
     background-position: center;
     background-repeat: repeat-x;
     background-size: cover;
+    
+    @include mq(md) {
+        background-image: url(../img/bg02.jpg);
+    }
     
     h2 {
         color: $white;

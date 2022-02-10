@@ -1,0 +1,50 @@
+.wood {
+    
+    .has-circle {
+        width: fit-content;
+        margin: 0 auto;
+        position: relative;
+
+        .circle {
+            $size: 100px;
+            position: absolute;
+            background: $blue;
+            width: $size;
+            height: $size;
+            bottom: -20px;
+            left: -20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+
+            p {
+                color: $white;
+                font-size: 15px;
+                font-weight: bold;
+                line-height: 1.6em;
+                text-align: center;
+                margin: 0 auto;
+            }
+
+            &--small {
+                $size: 85px;
+                width: $size;
+                height: $size;
+
+                p {
+                    font-size: 14px;
+                    line-height: 1.4em;
+                    small {
+                        font-size: 13px;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+section.bg_blue {
+    background: $bgblue;
+    padding: 40px 0;
+}

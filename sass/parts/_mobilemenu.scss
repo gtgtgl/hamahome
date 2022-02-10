@@ -29,7 +29,22 @@
 
     div.menu_company {
       max-width: $max-width;
-      margin: 60px auto;
+      margin: 60px auto 0;
+
+      .copyright {
+        background: transparent;
+        .container {
+          flex-direction: column;
+        }
+        ul.menu-footer {
+          display: flex;
+          margin: 0 0 60px;
+        }
+        p {
+          width: 100%;
+          text-align: right;
+        }
+      }
     }
 
     @include mq(lg) {
