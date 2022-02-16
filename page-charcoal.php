@@ -248,7 +248,12 @@ $slug = $page->post_name;
     テキストが入りますテキストが入りますテキストが入りますテキストが入ります
     </p>
 
-    <a href="#" class="btn-01">スタッフブログへ</a>
+    <?php 
+        $category_id_charcoal = get_cat_ID( '炭のこと' );
+        $category_link_charcoal = get_category_link( $category_id_charcoal );
+    ?>
+
+    <a href="<?php echo esc_url( $category_link_charcoal ); ?>" class="btn-01">スタッフブログへ</a>
 </section>
 
 	

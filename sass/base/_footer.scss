@@ -102,23 +102,20 @@ div.copyright {
     }
     
     .flex {
-        justify-content: center;
-
-        @include mq(md) {
             flex-direction: row;
             justify-content: space-between;
-        }
     }
 
     ul.menu-footer {
         $height: 17px;
         display: none;
-        margin: 0;
+        margin: 0 auto 60px 0;
         height: $height;
         font-size: 14px;
         border-left: 1px solid #{$text-color};
         @include mq(md) {
             display: flex;
+            margin: 0;
         }
 
         li {

@@ -23,7 +23,7 @@ $slug = $page->post_name;
         <div class="container">
             <h2>省エネ断熱工法</h2>
 
-            <p class="left-center">
+            <p>
             ハマホームのPS高断熱工法とは、柱の外側から断熱材を貼付ける外断熱工法。<br>
             壁はもちろん、基礎、屋根まで断熱材で覆うので、断熱材が途切れることなく家中をすっぽり包み込みます。<br>
             そして、床下に入れる炭。調湿性にすぐれ、家の湿度を快適に保ってくれます。<br>
@@ -35,7 +35,7 @@ $slug = $page->post_name;
             <div class="flex mt40 max700">
                 <div class="col-md4 center">
                     <div class="has-circle">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/noimage.jpg" alt="断熱材" width="250">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/fuudo/eco/img01.jpg" alt="断熱材" width="250">
                         <div class="circle">
                             <p>断熱材</p>
                         </div>
@@ -44,7 +44,7 @@ $slug = $page->post_name;
                 </div>
                 <div class="col-md4 center">
                     <div class="has-circle">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/noimage.jpg" alt="床下換気孔" width="250">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/fuudo/eco/img02.jpg" alt="床下換気孔" width="250">
                         <div class="circle">
                             <p>床下換気孔</p>
                         </div>
@@ -53,7 +53,7 @@ $slug = $page->post_name;
                 </div>
                 <div class="col-md4 center">
                     <div class="has-circle">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/noimage.jpg" alt="屋根裏換気扇" width="250">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/fuudo/eco/img03.jpg" alt="屋根裏換気扇" width="250">
                         <div class="circle">
                             <p>屋根裏<br>換気扇</p>
                         </div>

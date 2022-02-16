@@ -50,7 +50,7 @@
         </p>
 
         <div class="copyright">
-          <div class="container flex">
+          <div class="flex">
             <ul class="menu-footer">
               <li>
                 <a href="#">プライバシーポリシー</a>

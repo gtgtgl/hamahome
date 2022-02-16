@@ -5,6 +5,13 @@
         margin: 0 auto;
         position: relative;
 
+        img.overlay {
+            position: absolute;
+            bottom: -30px;
+            right: -10px;
+            filter: drop-shadow(2px 4px 6px #00000031);
+        }
+
         .circle {
             $size: 100px;
             position: absolute;

@@ -25,18 +25,14 @@ $slug = $page->post_name;
             丈夫な構造
             </h2>
 
-            <p class="left-center">
-            ハマホームでは、柱材は1本の木から1本しかとれない柱（芯持ち材）を使っています。<br>
-            芯を持っているので強くて丈夫な柱です。<br>
-            4寸角を使用しますが（通し柱は5寸）時には6寸、7寸といった太い柱を使用する時もあります。<br>
-            また、梁材では基準よりも太く大きな材料を使用しています。耐震補強金物との組み合わせで、頑丈な構造にしています。<br>
-            さらに、特長である丸太を加工して、構造材としているので文句なしです！
+            <p>
+            ハマホームでは、柱材は1本の木から1本しかとれない柱（芯持ち材）を使っています。芯を持っているので強くて丈夫な柱です。4寸角を使用しますが（通し柱は5寸）時には6寸、7寸といった太い柱を使用する時もあります。また、梁材では基準よりも太く大きな材料を使用しています。耐震補強金物との組み合わせで、頑丈な構造にしています。さらに、特長である丸太を加工して、構造材としているので文句なしです！
             </p>
             
             <div class="flex mt40 max700">
                 <div class="col-md4 center">
                     <div class="has-circle">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/noimage.jpg" alt="丸太・梁材" width="250">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/fuudo/wood/img01.jpg" alt="丸太・梁材" width="250">
                         <div class="circle">
                             <p>丸太・梁材</p>
                         </div>
@@ -45,7 +41,7 @@ $slug = $page->post_name;
                 </div>
                 <div class="col-md4 center">
                     <div class="has-circle">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/noimage.jpg" alt="建方時の丸太組" width="250">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/fuudo/wood/img02.jpg" alt="建方時の丸太組" width="250">
                         <div class="circle">
                             <p>建方時の<br>丸太組</p>
                         </div>
@@ -54,7 +50,7 @@ $slug = $page->post_name;
                 </div>
                 <div class="col-md4 center">
                     <div class="has-circle">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/noimage.jpg" alt="耐震補強金物" width="250">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/fuudo/wood/img03.jpg" alt="耐震補強金物" width="250">
                         <div class="circle">
                             <p>耐震<br>補強金物</p>
                         </div>
@@ -71,19 +67,14 @@ $slug = $page->post_name;
 
         <h2>健康素材</h2>
 
-        <p class="left-center">
-        ハマホームでは、小さな木材を接着剤で張り合わせた集成材は一切使用しておりません！<br>
-        本物の木材を使用しているので体にやさしい自然素材の家です。<br>
-        また、土台の防腐措置や土壌改良にも薬剤を使わず、炭を作る時に出る木酢液を使用します。<br>
-        木酢液には、殺菌・消炎・消毒・消臭などの効果があって、<br>
-        昆虫・害虫を寄せ付けない成分を含んでいます。<br>
-        自然のものを使用した健康住宅で、家を住まう人を守ります。
+        <p>
+        ハマホームでは、小さな木材を接着剤で張り合わせた集成材は一切使用しておりません！本物の木材を使用しているので体にやさしい自然素材の家です。また、土台の防腐措置や土壌改良にも薬剤を使わず、炭を作る時に出る木酢液を使用します。木酢液には、殺菌・消炎・消毒・消臭などの効果があって、昆虫・害虫を寄せ付けない成分を含んでいます。自然のものを使用した健康住宅で、家を住まう人を守ります。
         </p>
                 
         <div class="flex mt40 max700">
             <div class="col-md6 center">
                 <div class="has-circle">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/noimage.jpg" alt="土台の防腐措置" width="300">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/fuudo/wood/img04.jpg" alt="土台の防腐措置" width="300">
                     <div class="circle">
                         <p>土台の<br>防腐措置</p>
                     </div>
@@ -91,7 +82,8 @@ $slug = $page->post_name;
             </div>
             <div class="col-md6 center">
                 <div class="has-circle">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/noimage.jpg" alt="木酢液散布" width="300">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/fuudo/wood/img05.jpg" alt="木酢液散布" width="300">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/fuudo/wood/img-overlay.png" alt="木酢液散布" width="60" class="overlay">
                     <div class="circle">
                         <p>木酢液<br>散布</p>
                     </div>
@@ -106,16 +98,14 @@ $slug = $page->post_name;
 
         <h2>銘木材・床柱</h2>
 
-        <p class="left-center">
-        ハマホームでは、自社倉庫にてたくさんの銘木材・板材を保管してあります。<br>
-        天然のものなので世界に1つしかありません。お客様の目で見て触ってお好きな物を選んで頂きます。<br>
-        造作家具も扱っております。
+        <p>
+        ハマホームでは、自社倉庫にてたくさんの銘木材・板材を保管してあります。天然のものなので世界に1つしかありません。お客様の目で見て触ってお好きな物を選んで頂きます。造作家具も扱っております。
         </p>
                 
         <div class="flex flex-center mt40 max700">
             <div class="col-md4 center">
                 <div class="has-circle">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/noimage.jpg" alt="床柱" width="300">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/fuudo/wood/img06.jpg" alt="床柱" width="300">
                     <div class="circle circle--small">
                         <p>床柱</p>
                     </div>
@@ -123,7 +113,7 @@ $slug = $page->post_name;
             </div>
             <div class="col-md4 center">
                 <div class="has-circle">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/noimage.jpg" alt="木酢液板材散布" width="300">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/fuudo/wood/img07.jpg" alt="木酢液板材散布" width="300">
                     <div class="circle circle--small">
                         <p>板材</p>
                     </div>
@@ -134,7 +124,7 @@ $slug = $page->post_name;
         <div class="flex max700">
             <div class="col-md4 center">
                 <div class="has-circle">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/noimage.jpg" alt="造作家具（杉）" width="300">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/fuudo/wood/img08.jpg" alt="造作家具（杉）" width="300">
                     <div class="circle circle--small">
                         <p>造作家具<br><small>（杉）</small></p>
                     </div>
@@ -142,7 +132,7 @@ $slug = $page->post_name;
             </div>
             <div class="col-md4 center">
                 <div class="has-circle">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/noimage.jpg" alt="造作家具（スプルス）" width="300">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/fuudo/wood/img09.jpg" alt="造作家具（スプルス）" width="300">
                     <div class="circle circle--small">
                         <p>造作家具<br><small>（スプルス）</small></p>
                     </div>
@@ -150,7 +140,7 @@ $slug = $page->post_name;
             </div>
             <div class="col-md4 center">
                 <div class="has-circle">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/noimage.jpg" alt="造作家具（ポプラ）" width="300">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/fuudo/wood/img10.jpg" alt="造作家具（ポプラ）" width="300">
                     <div class="circle circle--small">
                         <p>造作家具<br><small>（ポプラ）</small></p>
                     </div>
@@ -168,7 +158,7 @@ $slug = $page->post_name;
 
     <div class="flex mt40">
         <div class="col-lg4 center">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/warranty/img02.jpg" alt="馬にも優しい オガクズ再利用" width="300">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/fuudo/wood/img11.jpg" alt="馬にも優しい オガクズ再利用" width="300">
         </div>
         <div class="col-lg8">
             <p>

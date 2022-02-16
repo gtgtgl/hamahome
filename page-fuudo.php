@@ -27,45 +27,48 @@ $slug = $page->post_name;
             暑い屋根裏の空気を外に追い出し、地表の涼しい空気を家の周りに循環させます。
             </p>
 
-            <p class="left-center">
-            夏の強い日差しを浴びて屋根裏の温度は急上昇、家の中は蒸し風呂状態。<br>
-            ハマホームの家は「暖かい空気は上昇する」という自然の働きから、<br>
-            断熱材と天井・内壁・床板の間に出来た通気路に絶えず上昇気流を起こして、<br>
-            暑い屋根裏の空気を外に追い出し、地表の涼しい空気を家の周りに循環させます。<br>
-            この空気が熱と湿気を家の外に放出してくれるのです。<br>
-            そしてこの働きに一役買っているのが、<br>
-            床下に数箇所設けられる床下換気孔と屋根裏につけられた自動温度設定で開閉する換気扇。<br>
-            設定した気温以上になると自動で働き、室温を上手にコントロールしてくれます。
+            <p>
+            夏の強い日差しを浴びて屋根裏の温度は急上昇、家の中は蒸し風呂状態。ハマホームの家は「暖かい空気は上昇する」という自然の働きから、断熱材と天井・内壁・床板の間に出来た通気路に絶えず上昇気流を起こして、暑い屋根裏の空気を外に追い出し、地表の涼しい空気を家の周りに循環させます。この空気が熱と湿気を家の外に放出してくれるのです。そしてこの働きに一役買っているのが、床下に数箇所設けられる床下換気孔と屋根裏につけられた自動温度設定で開閉する換気扇。設定した気温以上になると自動で働き、室温を上手にコントロールしてくれます。
             </p>
 
             <div class="summer_wrap mt40">
-                a
+
+            <p class="center">
+                
+            <img src="<?php echo get_template_directory_uri(); ?>/img/fuudo/img01.png" alt="丸太・梁材" width="550">
+            </p>
             </div>
 
-            <div class="flex mt60">
+            <div class="flex mt40">
                 <div class="col-lg6 flex">
-                    <div class="col-sm4 mb0">a</div>
-                    <div class="col-sm8 mb0">
+                    <div class="col-sm3 col-lg4 mb20 center">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/fuudo/summer01.png" alt="夏の気温" width="100">
+        </div>
+                    <div class="col-sm9 col-lg8 mb20">
                         <p>
                         福井県の夏の外気温とハマホームの家の気温と在来木造住宅の気温の変化を表したグラフです。外気温の低い6月は、室内温度が一般在来木造住宅よりも高く、外気温の高い7～8月は、室内温度が外気温よりも高い一般在来木造住宅と比べて、PS工法では外気温よりも低く住みやすい温度を保ちます。人にも家にも地球にも優しい家なのです。
                         </p>
                     </div>
                     <div class="col-12">
                         <p class="big center">
-                        福井の夏の外気温とハマホームの家の気温の変化
+                        福井の夏の外気温とハマホームの家の気温の変化<br>
+            <img src="<?php echo get_template_directory_uri(); ?>/img/fuudo/summer03.jpg" alt="福井の夏の外気温とハマホームの家の気温の変化" width="330">
                         </p>
                     </div>
                 </div>
                 <div class="col-lg6 flex">
-                    <div class="col-sm4 mb0">a</div>
-                    <div class="col-sm8 mb0">
+                    <div class="col-sm3 col-lg4 mb20 center">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/fuudo/summer02.png" alt="夏の湿度" width="100">
+        </div>
+                    <div class="col-sm9 col-lg8 mb20">
                         <p>
                         ハマホームの家では、6～8月を通して、外湿度が一般在来木造住宅より低くなっています。ハマホームの家では絶え上昇している空気が、熱を放出するだけでは なく湿 度 も外 へ 放 出しているからです。湿度が低いという事は、この時期に多い木の腐りやシロアリの発生が抑えられるという事です！つまり、健康長寿命の家という訳ですね！！
                         </p>
                     </div>
                     <div class="col-12">
                         <p class="big center">
-                        福井の夏の外湿度とハマホームの家の湿度の変化
+                        福井の夏の外湿度とハマホームの家の湿度の変化<br>
+            <img src="<?php echo get_template_directory_uri(); ?>/img/fuudo/summer04.jpg" alt="福井の夏の外湿度とハマホームの家の湿度の変化" width="330">
                         </p>
                     </div>
                 </div>

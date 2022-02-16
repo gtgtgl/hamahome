@@ -197,123 +197,123 @@ Flexbox設定
 }
 
 .mt10 {
-  margin-top: 10px;
+  margin-top: 10px !important;
 }
 
 .mb10 {
-  margin-bottom: 10px;
+  margin-bottom: 10px !important;
 }
 
 .mt20 {
-  margin-top: 20px;
+  margin-top: 20px !important;
 }
 
 .mb20 {
-  margin-bottom: 20px;
+  margin-bottom: 20px !important;
 }
 
 .mt30 {
-  margin-top: 30px;
+  margin-top: 30px !important;
 }
 
 .mb30 {
-  margin-bottom: 30px;
+  margin-bottom: 30px !important;
 }
 
 .mt40 {
-  margin-top: 40px;
+  margin-top: 40px !important;
 }
 
 .mb40 {
-  margin-bottom: 40px;
+  margin-bottom: 40px !important;
 }
 
 .mt50 {
-  margin-top: 50px;
+  margin-top: 50px !important;
 }
 
 .mb50 {
-  margin-bottom: 50px;
+  margin-bottom: 50px !important;
 }
 
 .mt60 {
-  margin-top: 60px;
+  margin-top: 60px !important;
 }
 
 .mb60 {
-  margin-bottom: 60px;
+  margin-bottom: 60px !important;
 }
 
 .mt70 {
-  margin-top: 70px;
+  margin-top: 70px !important;
 }
 
 .mb70 {
-  margin-bottom: 70px;
+  margin-bottom: 70px !important;
 }
 
 .mt80 {
-  margin-top: 80px;
+  margin-top: 80px !important;
 }
 
 .mb80 {
-  margin-bottom: 80px;
+  margin-bottom: 80px !important;
 }
 
 .mt90 {
-  margin-top: 90px;
+  margin-top: 90px !important;
 }
 
 .mb90 {
-  margin-bottom: 90px;
+  margin-bottom: 90px !important;
 }
 
 .mt100 {
-  margin-top: 100px;
+  margin-top: 100px !important;
 }
 
 .mb100 {
-  margin-bottom: 100px;
+  margin-bottom: 100px !important;
 }
 
 .mt110 {
-  margin-top: 110px;
+  margin-top: 110px !important;
 }
 
 .mb110 {
-  margin-bottom: 110px;
+  margin-bottom: 110px !important;
 }
 
 .mt120 {
-  margin-top: 120px;
+  margin-top: 120px !important;
 }
 
 .mb120 {
-  margin-bottom: 120px;
+  margin-bottom: 120px !important;
 }
 
 .mt130 {
-  margin-top: 130px;
+  margin-top: 130px !important;
 }
 
 .mb130 {
-  margin-bottom: 130px;
+  margin-bottom: 130px !important;
 }
 
 .mt140 {
-  margin-top: 140px;
+  margin-top: 140px !important;
 }
 
 .mb140 {
-  margin-bottom: 140px;
+  margin-bottom: 140px !important;
 }
 
 .mt150 {
-  margin-top: 150px;
+  margin-top: 150px !important;
 }
 
 .mb150 {
-  margin-bottom: 150px;
+  margin-bottom: 150px !important;
 }
 
 .mt0 {
@@ -1306,17 +1306,12 @@ div.copyright p {
   }
 }
 div.copyright .flex {
-  justify-content: center;
-}
-@media (min-width: 768px) {
-  div.copyright .flex {
-    flex-direction: row;
-    justify-content: space-between;
-  }
+  flex-direction: row;
+  justify-content: space-between;
 }
 div.copyright ul.menu-footer {
   display: none;
-  margin: 0;
+  margin: 0 auto 60px 0;
   height: 17px;
   font-size: 14px;
   border-left: 1px solid #333333;
@@ -1324,6 +1319,7 @@ div.copyright ul.menu-footer {
 @media (min-width: 768px) {
   div.copyright ul.menu-footer {
     display: flex;
+    margin: 0;
   }
 }
 div.copyright ul.menu-footer li {
@@ -2315,7 +2311,7 @@ main.company section.googlemap iframe {
   border: 1px solid black;
   border-right: none;
   position: absolute;
-  left: -30px;
+  left: -git bran30px;
 }
 .flow .flow_wrap.month:after {
   content: "１～２ヶ月";
@@ -2563,6 +2559,7 @@ main.fuudo p.big {
 }
 main.fuudo div.summer_wrap {
   background: #FFF2E6;
+  padding: 40px 0;
 }
 
 /* -----------------------------------
@@ -2753,6 +2750,12 @@ div#page_topimg.page_staff {
 }
 div#page_topimg.page_charcoal {
   background-image: url("../img/fuudo/charcoal/header.jpg");
+}
+div#page_topimg.page_eco {
+  background-image: url("../img/fuudo/eco/header.jpg");
+}
+div#page_topimg.page_wood {
+  background-image: url("../img/fuudo/wood/header.jpg");
 }
 div#page_topimg.page_reform {
   background-image: url("../img/reform/header.jpg");
@@ -3280,6 +3283,12 @@ section.bg_purple {
   width: fit-content;
   margin: 0 auto;
   position: relative;
+}
+.wood .has-circle img.overlay {
+  position: absolute;
+  bottom: -30px;
+  right: -10px;
+  filter: drop-shadow(2px 4px 6px #00000031);
 }
 .wood .has-circle .circle {
   position: absolute;

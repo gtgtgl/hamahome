@@ -51,10 +51,10 @@ Flexbox設定
 
 @for $i from 1 through 15 {
   .mt#{$i}0 {
-    margin-top: #{$i}0px;
+    margin-top: #{$i}0px !important;
   }
   .mb#{$i}0 {
-    margin-bottom: #{$i}0px;
+    margin-bottom: #{$i}0px !important;
   }
 }
 
