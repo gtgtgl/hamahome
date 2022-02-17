@@ -5,65 +5,67 @@
 #mobile_menu {
   $max-width: 500px;
   overflow: scroll;
-    height: 100vh;
-    width: 100vw;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    background: #C9EBE5;
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    transition: 0.3s;
-    z-index: map-get($layer, modal);
-    &.checked {
-      opacity: 1;
-      visibility: visible;
-      pointer-events: all;
+  padding: 40px 0 0;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background: #C9EBE5;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: 0.3s;
+  z-index: map-get($layer, modal);
+  &.checked {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+  }
+
+  nav.main-navigation {
+    max-width: $max-width;
+    margin: auto;
+  }
+
+  div.menu_company {
+    max-width: $max-width;
+    margin: 60px auto 0;
+
+    .copyright {
+      background: transparent;
+      .container {
+        flex-direction: column;
+      }
+      ul.menu-footer {
+        display: flex;
+        margin: 0 0 60px;
+      }
+      p {
+        width: 100%;
+        text-align: right;
+      }
     }
+  }
+
+  @include mq(lg) {
+    height: $header-height;
+    padding: 0;
+    position: relative;
+    background: transparent;
+    opacity: 1;
+    visibility: visible;
+    overflow: visible;
+    pointer-events: all;
+    z-index: 1;
+    width: fit-content;
 
     nav.main-navigation {
-      max-width: $max-width;
-      margin: auto;
+      max-width: 100%;
     }
-
-    div.menu_company {
-      max-width: $max-width;
-      margin: 60px auto 0;
-
-      .copyright {
-        background: transparent;
-        .container {
-          flex-direction: column;
-        }
-        ul.menu-footer {
-          display: flex;
-          margin: 0 0 60px;
-        }
-        p {
-          width: 100%;
-          text-align: right;
-        }
-      }
-    }
-
-    @include mq(lg) {
-      height: $header-height;
-      position: relative;
-      background: transparent;
-      opacity: 1;
-      visibility: visible;
-      overflow: visible;
-      pointer-events: all;
-      z-index: 1;
-      width: fit-content;
-
-      nav.main-navigation {
-        max-width: 100%;
-      }
-      
-      .menu_company {
-        display: none;
+    
+    .menu_company {
+      display: none;
     }
       
   }
