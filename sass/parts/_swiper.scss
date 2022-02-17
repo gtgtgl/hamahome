@@ -1,0 +1,62 @@
+.swiper {
+
+    .swiper-button-prev {
+        left: 12%;
+
+        @include mq(md) {
+            left: 15%;
+        }
+    }
+
+    .swiper-button-next {
+        right: 12%;
+
+        @include mq(md) {
+            right: 15%;
+        }
+    }
+
+    .swiper-slide {
+        height: auto;
+    }
+
+    .swiper_card {
+        height: 100%;
+        background: white;
+        padding: 25px 15px 0;
+        p {
+            font-size: 14px;
+        }
+        p.title {
+            font-size: 15px;
+            font-weight: bold;
+            text-align: center;
+        }
+    }
+    
+    &.swiper-summer {
+        .swiper-button-next,
+        .swiper-button-prev {
+        --swiper-navigation-color: #{$link-color}; //ここに変更する色を指定
+        }
+        
+    .swiper_card {
+        p.title {
+            color: $link-color;
+        }
+    }
+    }
+    
+    &.swiper-winter {
+        .swiper-button-next,
+        .swiper-button-prev {
+        --swiper-navigation-color: #{$blue}; //ここに変更する色を指定
+        }
+        
+    .swiper_card {
+        p.title {
+            color: $blue;
+        }
+    }
+    }
+}

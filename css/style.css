@@ -2296,9 +2296,18 @@ main.company section.googlemap iframe {
   margin: 0 auto;
 }
 
+section#flow {
+  padding: 80px 0 120px;
+}
+
 .flow .flow_wrap {
   max-width: 750px;
-  margin: 0 auto;
+  margin: 20px auto 0 30px;
+}
+@media (min-width: 768px) {
+  .flow .flow_wrap {
+    margin: 20px auto 0;
+  }
 }
 .flow .flow_wrap.month {
   position: relative;
@@ -2307,28 +2316,48 @@ main.company section.googlemap iframe {
   content: "";
   display: block;
   height: 100%;
-  width: 25px;
+  width: 18px;
   border: 1px solid black;
   border-right: none;
   position: absolute;
-  left: -git bran30px;
+  left: -20px;
+}
+@media (min-width: 768px) {
+  .flow .flow_wrap.month:before {
+    width: 22px;
+    left: -28px;
+  }
 }
 .flow .flow_wrap.month:after {
-  content: "１～２ヶ月";
   display: block;
+  font-weight: bold;
   background: #EAEAEA;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  width: 32px;
+  width: 27px;
   position: absolute;
   margin: auto;
-  left: -48px;
-  top: 0;
-  bottom: 0;
+  left: -33px;
+  line-height: 1;
+  top: 30px;
   -ms-writing-mode: tb-rl;
       writing-mode: vertical-rl;
-  padding: 15px 4px;
+  padding: 15px 6px;
+  z-index: 2;
+}
+@media (min-width: 768px) {
+  .flow .flow_wrap.month:after {
+    width: 30px;
+    padding: 15px 8px;
+    left: -42px;
+  }
+}
+.flow .flow_wrap.month.month01:after {
+  content: "約１～２ヵ月";
+}
+.flow .flow_wrap.month.month02:after {
+  content: "約３～６ヵ月";
 }
 .flow .flow_card {
   background: #EDF8F7;
@@ -2336,19 +2365,40 @@ main.company section.googlemap iframe {
   margin: 20px auto;
   display: flex;
 }
+@media (min-width: 768px) {
+  .flow .flow_card {
+    padding: 10px 25px;
+  }
+}
 .flow .flow_card:last-of-type {
   margin-bottom: 0px;
 }
 .flow .flow_card .icon {
-  width: 100px;
+  width: 70px;
   margin-right: 20px;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+.flow .flow_card .icon img {
+  width: 60px;
+}
+@media (min-width: 768px) {
+  .flow .flow_card .icon {
+    width: 80px;
+  }
+  .flow .flow_card .icon img {
+    width: 70px;
+  }
+}
 .flow .flow_card .text {
-  width: calc(100% - 115px);
+  width: calc(100% - 85px);
+}
+@media (min-width: 768px) {
+  .flow .flow_card .text {
+    width: calc(100% - 95px);
+  }
 }
 .flow .flow_card .text p.title {
   font-family: "Noto Sans JP", sans-serif;
@@ -2361,7 +2411,14 @@ main.company section.googlemap iframe {
   font-size: 35px;
   vertical-align: text-bottom;
   margin-right: 10px;
-  display: inline-block;
+  display: block;
+  margin-bottom: 8px;
+}
+@media (min-width: 481px) {
+  .flow .flow_card .text p.title span.number {
+    display: inline-block;
+    margin-bottom: 0;
+  }
 }
 .flow .flow_card .text p.title span.orange {
   color: #FF7E00;
@@ -2561,6 +2618,10 @@ main.fuudo div.summer_wrap {
   background: #FFF2E6;
   padding: 40px 0;
 }
+main.fuudo div.winter_wrap {
+  background: #E1F3F1;
+  padding: 40px 0;
+}
 
 /* -----------------------------------
 リスト
@@ -2614,6 +2675,7 @@ ul.ul_check li:before {
 ----------------------------------- */
 #mobile_menu {
   overflow: scroll;
+  padding: 40px 0 0;
   height: 100vh;
   width: 100vw;
   position: fixed;
@@ -2656,6 +2718,7 @@ ul.ul_check li:before {
 @media (min-width: 1030px) {
   #mobile_menu {
     height: 60px;
+    padding: 0;
     position: relative;
     background: transparent;
     opacity: 1;
@@ -3178,6 +3241,53 @@ main.staff .staff_wrap p.p {
   font-size: 15px;
   line-height: 1.8em;
   margin-bottom: 20px;
+}
+
+.swiper .swiper-button-prev {
+  left: 12%;
+}
+@media (min-width: 768px) {
+  .swiper .swiper-button-prev {
+    left: 15%;
+  }
+}
+.swiper .swiper-button-next {
+  right: 12%;
+}
+@media (min-width: 768px) {
+  .swiper .swiper-button-next {
+    right: 15%;
+  }
+}
+.swiper .swiper-slide {
+  height: auto;
+}
+.swiper .swiper_card {
+  height: 100%;
+  background: white;
+  padding: 25px 15px 0;
+}
+.swiper .swiper_card p {
+  font-size: 14px;
+}
+.swiper .swiper_card p.title {
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+.swiper.swiper-summer .swiper-button-next,
+.swiper.swiper-summer .swiper-button-prev {
+  --swiper-navigation-color: #FF7E00;
+}
+.swiper.swiper-summer .swiper_card p.title {
+  color: #FF7E00;
+}
+.swiper.swiper-winter .swiper-button-next,
+.swiper.swiper-winter .swiper-button-prev {
+  --swiper-navigation-color: #45B5A9;
+}
+.swiper.swiper-winter .swiper_card p.title {
+  color: #45B5A9;
 }
 
 table {

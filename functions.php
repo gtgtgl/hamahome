@@ -137,6 +137,7 @@ add_action( 'widgets_init', 'hamahome_widgets_init' );
 // CSSおよびスクリプト読み込み
 function hamahome_scripts() {
 	wp_enqueue_style( 'hamahome-style', get_stylesheet_uri(), array(), _S_VERSION );
+	wp_enqueue_style( 'hamahome-style-swiper', get_template_directory_uri() . '/css/swiper-bundle.min.css', array(), _S_VERSION );
 	wp_enqueue_style( 'hamahome-style-base', get_template_directory_uri() . '/css/style.css', array(), _S_VERSION );
 	wp_style_add_data( 'hamahome-style', 'rtl', 'replace' );
 
@@ -144,6 +145,9 @@ function hamahome_scripts() {
 	wp_enqueue_script( 'hamahome-select', get_template_directory_uri() . '/js/select.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'hamahome-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'hamahome-common', get_template_directory_uri() . '/js/common.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'hamahome-swiper', get_template_directory_uri() . '/js/swiper-bundle.min.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'hamahome-swiper-map', get_template_directory_uri() . '/js/swiper-bundle.min.js.map', array(), _S_VERSION, true );
+	wp_enqueue_script( 'hamahome-swiper-setting', get_template_directory_uri() . '/js/swiper-setting.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
