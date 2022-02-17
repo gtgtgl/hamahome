@@ -10,7 +10,7 @@
             TEL.0776-26-3183
         </p>
 
-        <a href="#" class="btn-01">
+        <a href="<?php echo esc_url( home_url( '/contact' ) ); ?>" class="btn-01">
             メールでのお問い合わせはこちら
         </a>
     </div>

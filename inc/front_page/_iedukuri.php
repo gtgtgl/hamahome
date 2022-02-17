@@ -9,7 +9,7 @@
 
         <div class="flex flex-center mt60 max900">
             <div class="col-sm8 col-md6">
-                <a href="#" class="banner">
+                <a href="<?php echo esc_url( home_url( '/flow' ) ); ?>" class="banner">
                         <img src="<?php echo get_template_directory_uri(); ?>/img/banner01.jpg" alt="家づくりの流れ">
                 </a>
             </div>
@@ -24,7 +24,7 @@
                 </a>
             </div>
             <div class="col-sm8 col-md6">
-                <a href="#" class="banner">
+                <a href="<?php echo esc_url( home_url( '/qa' ) ); ?>" class="banner">
                         <img src="<?php echo get_template_directory_uri(); ?>/img/banner04.jpg" alt="お困りごと">
                 </a>
             </div>
