@@ -32,7 +32,7 @@ a.btn_list {
   }
 }
 
-a.btn-01 {
+a.btn-01, a.btn-02 {
   $height: 50px;
   display: block;
   background: $orange;
@@ -47,13 +47,6 @@ a.btn-01 {
   padding: 0 20px;
   text-align: center;
   position: relative;
-  &:after {
-    @include arrow_right($size:8px, $color:white, $border:2px);
-    margin: auto;
-    right: 20px;
-    top: 0;
-    bottom: 0;
-  }
 
   @include mq(md) {
     $height: 60px;
@@ -67,5 +60,25 @@ a.btn-01 {
 
   &:hover {
     background: $link-hover;
+  }
+}
+
+a.btn-01 {
+  &:after {
+    @include arrow_right($size:8px, $color:white, $border:2px);
+    margin: auto;
+    right: 20px;
+    top: 0;
+    bottom: 0;
+  }
+}
+
+a.btn-02 {
+  &:before {
+    @include arrow_left($size:8px, $color:white, $border:2px);
+    margin: auto;
+    left: 20px;
+    top: 0;
+    bottom: 0;
   }
 }

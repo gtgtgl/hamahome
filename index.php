@@ -32,7 +32,7 @@ $slug  = get_my_archive_slug();
 						<li class="post_item">
 							<header class="post_item_header">
 								<div class="post_item_date"><?php the_time( 'Y.m.d' ); ?></div>
-									<?php $tags = get_the_category($post->ID); ?>
+									<?php $tags = get_the_tags($post->ID); ?>
                 	<?php if ( $tags ): ?>
                     <ul class="post_item_cats">
                       <?php foreach ( $tags as $tag ) : ?>
