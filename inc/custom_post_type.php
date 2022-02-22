@@ -33,7 +33,8 @@ function custom_post_example() {
 			'capability_type' => 'post',
 			'hierarchical' => true,
 			/* the next one is important, it tells what's enabled in the post editor */
-			'supports' => array( 'title', 'editor', 'thumbnail', 'author', 'excerpt', 'sticky')
+			'supports' => array( 'title', 'editor', 'thumbnail', 'author', 'excerpt', 'sticky'),
+			'show_in_rest' => true
 		) /* end of options */
 	); /* end of register post type */
 }
