@@ -50,7 +50,21 @@
 		<li>&gt;</li>
 	<?php endif; ?>
 		<li><?php echo $post -> post_title; ?></li>
-<?php elseif(is_single()): /* 個別記事 */ ?>
+<?php elseif(is_single()): /* 個別記事 */ 
+	if (is_singular('construction')) :
+	$term = get_the_terms($post->ID, 'construction_cat');
+	$term_name = $term[0]->name;
+	$link = get_term_link($term[0]->slug, 'construction_cat');
+?>
+
+<li><a href="<?php echo get_post_type_archive_link( 'construction' ); ?>">施工事例</a></li>
+<li>&gt;</li>
+<li><a href="<?php echo get_term_link($term[0]->slug, 'construction_cat'); ?>"><?php echo $term[0]->name; ?></a></li>
+
+<?php
+	else:
+?>
+	
  <?php $categories = get_the_category($post->ID); ?>
 		<?php $cat = $categories[0]; ?>
 	<?php if($cat -> parent != 0): ?>
@@ -61,6 +75,9 @@
 			<?php endforeach; ?>
 	<?php endif; ?>
 		<li><a href="<?php echo get_category_link($cat -> cat_ID); ?>"><?php echo $cat-> cat_name; ?></a></li>
+
+		<?php endif; ?>
+
 		<li>&gt;</li>
 		<li><?php echo $post -> post_title; ?></li>
 <?php else: /* 上記に当てはまらないページ */ ?>
