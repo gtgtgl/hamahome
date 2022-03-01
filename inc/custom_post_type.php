@@ -133,21 +133,6 @@ function hamahome_save_customfield( $post_id )
            
 add_action( 'save_post', 'hamahome_save_customfield' );
 
-// カスタムフィールドの位置を変更する
-// 参考：https://techmemo.biz/wordpress/metabox-arrangement-change/
-function hamahome_metabox_place_change_script( $hook ) {
-	if ( $hook == 'post.php' || $hook == 'post-new.php' ) {
-  $script = <<< SCRIPT
-      jQuery(function($) {
-      $('#metabox_construction_name').insertAfter('#titlediv');
-      $('#metabox_construction_name').css('margin-top','20px');
-      });
-  SCRIPT;
-	  wp_add_inline_script( 'editor', $script );
-	}
-  }
-  add_action( 'admin_enqueue_scripts', 'hamahome_metabox_place_change_script' );
-
 // 管理画面でのカスタム投稿の並び順を変更する
 function hamahome_admin_custom_posttype_order($wp_query) {
 	if( is_admin() ) {
