@@ -52,8 +52,9 @@ function custom_post_example() {
 				'edit_item' => __( '編集', 'hamahome' ), /* edit custom taxonomy title */
 				'update_item' => __( '更新', 'hamahome' ), /* update title for taxonomy */
 				'add_new_item' => __( 'カテゴリーを追加する', 'hamahome' ), /* add new title for taxonomy */
-				'new_item_name' => __( 'カテゴリーの名前', 'hamahome' ) /* name title for taxonomy */
+				'new_item_name' => __( 'カテゴリーの名前', 'hamahome' ), /* name title for taxonomy */
 			),
+			'show_in_rest' => true,
 			'show_admin_column' => true,
 			'show_ui' => true,
 			'query_var' => true,
