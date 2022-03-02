@@ -55,3 +55,11 @@ function get_my_archive_slug() {
     return $wp_obj->name;
   endif;
 }
+
+
+// 抜粋文字数指定
+function register_excerpt_length()
+{
+  return 64;
+}
+add_filter('excerpt_length', 'register_excerpt_length', 999);

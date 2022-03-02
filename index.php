@@ -70,6 +70,8 @@ $slug  = get_my_archive_slug();
 					?>
 				
 				</ul>
+
+				<?php get_template_part('template-parts/pagination'); //ページ送り ?>
 				
 			</div>
 		</section>

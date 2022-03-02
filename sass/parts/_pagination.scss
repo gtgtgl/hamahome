@@ -1,0 +1,56 @@
+/**
+ * Component - Pagination
+ */
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 3rem;
+  padding-bottom: 0;
+  text-align: center;
+  line-height: 1;
+
+  &__item {
+    margin-bottom: 0;
+    
+    a {
+      display: block;
+      margin: auto;
+      padding: 1rem;
+      border: 2px solid white;
+      background-color: $orange;
+      color: $white;
+      opacity: .85;
+      text-decoration: none;
+      text-align: center;
+      outline: 0;
+      user-select: none;
+      cursor: pointer;
+    }
+    
+    &.--prev {
+      margin-right: 3rem;
+    }
+
+    &.--next {
+      margin-left: 3rem;
+    }
+
+    &.--current {
+      padding: 1rem;
+      border: 2px solid $white;
+      background-color: $lightorange;
+      color: $white;
+    }
+
+    &.--joint {
+      padding: 1rem;
+      border: 2px solid $white;
+      background-color: $orange;
+      color: $white;
+    }
+  }
+}
