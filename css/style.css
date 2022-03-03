@@ -980,7 +980,7 @@ header.site-header .site-title a {
   height: 100%;
 }
 header.site-header .site-title img {
-  width: 170px;
+  width: auto;
 }
 @media (min-width: 1030px) {
   header.site-header {

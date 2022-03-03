@@ -43,7 +43,7 @@ header.site-header {
             height: 100%;
         }
         img {
-            width: 170px;
+            width: auto;
         }
     }
     @include mq(lg) {
