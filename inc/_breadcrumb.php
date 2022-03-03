@@ -23,6 +23,7 @@
 	<?php elseif(is_year()): /* 年別 */ ?>
 			<li><?php echo get_query_var('year'); ?>年</li>
 	<?php endif; ?>
+
 <?php elseif(is_category()): /* カテゴリー */ ?>
 	<?php $cat = get_queried_object(); ?>
 		<?php if($cat -> parent != 0): ?>
@@ -33,6 +34,16 @@
 			<?php endforeach; ?>
 		<?php endif; ?>
 	<li><?php echo $cat -> cat_name; //single_cat_title(); ?></li>
+
+<?php elseif( is_tax('construction_cat') ): /* 施工事例カテゴリー */ ?>
+<?php 
+	$term_object = get_queried_object(); // タームオブジェクトを取得
+	$term_name   = $term_object->name;
+	 ?>
+<li><a href="<?php echo get_post_type_archive_link( 'construction' ); ?>">施工事例</a></li>
+<li>&gt;</li>
+<li><?php echo $term_name; ?></li>
+
 <?php elseif(is_author()): /* 投稿者 */ ?>
 	<li>投稿者 : <?php the_author_meta('display_name', get_query_var('author')); ?></li>
 <?php elseif(is_page()): /* 固定ページ */ ?>
