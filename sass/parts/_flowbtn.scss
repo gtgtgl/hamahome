@@ -54,6 +54,10 @@
         .flowbtn_wrap {
             justify-content: space-between;
         }
+
+        &.is_logged_in {
+            top: 32px;
+        }
     }
     
     .flowbtn_wrap {

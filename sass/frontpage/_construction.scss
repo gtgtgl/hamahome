@@ -81,6 +81,8 @@ section#top_construction {
         div.construction_inner {
             overflow-x: auto;
             @include hidden-scrollbar;
+            max-width: 930px;
+            margin: auto;
         }
 
         div.construction_item_container {

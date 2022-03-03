@@ -11,7 +11,12 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 
-<header id="masthead" class="site-header">
+<?php if ( is_user_logged_in() ) : ?>
+  <header id="masthead" class="site-header is_logged_in">
+<?php else: ?>
+  <header id="masthead" class="site-header">
+<?php endif; ?>
+
   <div class="container">
 
     <div class="site-branding">
@@ -74,7 +79,12 @@
   
 </header><!-- #masthead -->
 
+<?php if ( is_user_logged_in() ) : ?>
+<div id="flow_btn" class="is_logged_in">
+<?php else: ?>
 <div id="flow_btn">
+<?php endif; ?>
+
   <div class="flowbtn_wrap">
 
   <a href="tel:0776263831" class="tel">
