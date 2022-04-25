@@ -288,19 +288,6 @@ $slug = $page->post_name;
                 <a href="<?php echo esc_url( home_url( '/fuudo/wood' ) ); ?>" class="btn-01">もっと詳しく</a>
             </div>
 
-            <div class="col-7 col-md4">
-                    <div>
-                <img src="<?php echo get_template_directory_uri(); ?>/img/title01.png" alt="パネル工法" width="200">
-                    </div>
-                <div class="img">
-                    <div>
-                <img src="<?php echo get_template_directory_uri(); ?>/img/icon01.png" alt="パネル工法" width="130">
-                    </div>
-                </div>
-                <p class="s">テキストが入りますテキストが入りますテキストが入りますテキストが入ります</p>
-                <a href="<?php echo esc_url( home_url( '/fuudo/panel' ) ); ?>" class="btn-01">もっと詳しく</a>
-            </div>
-
         </div>
 
     </div>

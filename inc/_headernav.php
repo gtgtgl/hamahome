@@ -36,7 +36,6 @@
       </li>
       <li class="has-child"><a href="<?php echo esc_url( home_url( '/fuudo' ) ); ?>">福井の風土に合う家</a>
         <ul>
-            <li><a href="<?php echo esc_url( home_url( '/fuudo/panel' ) ); ?>">パネル工法</a></li>
             <li><a href="<?php echo esc_url( home_url( '/fuudo/charcoal' ) ); ?>">炭の力</a></li>
             <li><a href="<?php echo esc_url( home_url( '/fuudo/eco' ) ); ?>">省エネの断熱</a></li>
             <li><a href="<?php echo esc_url( home_url( '/fuudo/wood' ) ); ?>">木へのこだわり</a></li>
