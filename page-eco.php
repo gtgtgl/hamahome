@@ -84,7 +84,7 @@ $slug = $page->post_name;
                     </div>
                 </div>
                 <p class="s">床下に炭を吊るすことで、大切な家を湿気やシロアリ、カビから守ってくれます。</p>
-                <a href="<?php echo esc_url( home_url( '/fuudo/chacoal' ) ); ?>" class="btn-01">もっと詳しく</a>
+                <a href="<?php echo esc_url( home_url( '/fuudo/charcoal' ) ); ?>" class="btn-01">もっと詳しく</a>
             </div>
 
             <div class="col-7 col-md4">
