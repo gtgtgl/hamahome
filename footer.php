@@ -71,7 +71,6 @@
 			<div class="col-6 col-md4 col-xl3">
 				<h4>福井の風土に合う家</h4>
 				<ul class="footer-sitemap">
-					<li><a href="<?php echo esc_url( home_url( '/fuudo/panel' ) ); ?>">パネル工法</a></li>
 					<li><a href="<?php echo esc_url( home_url( '/fuudo/charcoal' ) ); ?>">炭の力</a></li>
 					<li><a href="<?php echo esc_url( home_url( '/fuudo/eco' ) ); ?>">省エネの断熱</a></li>
 					<li><a href="<?php echo esc_url( home_url( '/fuudo/wood' ) ); ?>">木へのこだわり</a></li>
@@ -85,7 +84,7 @@
 		<div class="container flex">
 			<ul class="menu-footer">
 				<li>
-					<a href="#">プライバシーポリシー</a>
+					<a href="<?php echo esc_url( home_url( '/privacy_policy' ) ); ?>">プライバシーポリシー</a>
 				</li>
 			</ul>
 			<p>Copyright © 2021 Hama Home.</p>

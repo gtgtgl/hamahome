@@ -58,7 +58,7 @@
           <div class="flex">
             <ul class="menu-footer">
               <li>
-                <a href="#">プライバシーポリシー</a>
+                <a href="<?php echo esc_url( home_url( '/privacy_policy' ) ); ?>">プライバシーポリシー</a>
               </li>
             </ul>
             <p>Copyright © 2021 Hama Home.</p>
@@ -87,17 +87,17 @@
 
   <div class="flowbtn_wrap">
 
-  <a href="tel:0776263831" class="tel">
+  <a href="tel:0776263183" class="tel">
     <div class="img">
       <img src="<?php echo get_template_directory_uri(); ?>/img/tel.svg" alt="電話で問い合わせ">
     </div>
     <div class="text">
       <p class="small"><span>受付時間 </span>00:00～00:00（平日のみ）</p>
-      <p class="number">0776-26-3831</p>
+      <p class="number">0776-26-3183</p>
     </div>
   </a>
 
-  <a href="#" class="mail">
+  <a href="<?php echo esc_url( home_url( '/contact' ) ); ?>" class="mail">
     <img src="<?php echo get_template_directory_uri(); ?>/img/mail.svg" alt="メールで問い合わせ">
     <span>お問い合わせ</span>
   </a>

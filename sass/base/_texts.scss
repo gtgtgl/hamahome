@@ -40,12 +40,27 @@ h2 {
     span.orange {
       color: $link-color;
     }
+    &.left {
+      text-align: left;
+      margin-bottom: 0;
+      font-size: 20px;
+      @include mq($breakpoint: md) {
+        font-size: 25px;
+      }
+    }
 }
 
 h3 {
   font-size: 21px;
   @include mq($breakpoint: md) {
     font-size: 24px;
+  }
+  &.left {
+    margin-bottom: 0;
+    font-size: 17px;
+    @include mq($breakpoint: md) {
+      font-size: 18px;
+    }
   }
 }
 
@@ -54,6 +69,7 @@ p.left-center {
     text-align: center;
   }
 }
+
 
 p.s {
   font-size: 14px;

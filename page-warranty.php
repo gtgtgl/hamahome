@@ -53,7 +53,7 @@ $slug = $page->post_name;
         </div>
     </div>
 
-    <a href="#" class="btn-01">あんしん住宅瑕疵保険のサイトへ</a>
+    <a href="https://www.j-anshin.co.jp/service/kashihoken/" target="_blank" class="btn-01">あんしん住宅瑕疵保険のサイトへ</a>
     </div>
 </section>
 	
@@ -79,7 +79,7 @@ $slug = $page->post_name;
         </div>
     </div>
 
-    <a href="#" class="btn-01">完成保証制度のサイトへ</a>
+    <a href="https://www.j-anshin.co.jp/service/kanseihosho/" target="_blank" class="btn-01">完成保証制度のサイトへ</a>
     </div>
 </section>
 	
