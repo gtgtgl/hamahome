@@ -7,6 +7,11 @@ table {
       &:not(:first-of-type) {
         border-top: 1px solid #C2C2C2;
       }
+
+      @media (max-width: 500px)  {
+        display: flex;
+        flex-direction: column;
+      }
     }
   
     th, td {
@@ -16,6 +21,16 @@ table {
     }
     th {
         text-align: left;
+        @media (max-width: 500px)  {
+          padding: 11px 0;
+          font-size: 14px;
+        }
+    }
+    td {
+      @media (max-width: 500px)  {
+        padding: 0 0 11px;
+        font-size: 13px;
+      }
     }
     @include mq(md) {
         th {
