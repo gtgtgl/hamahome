@@ -24,7 +24,7 @@ $slug = $page->post_name;
 
             <div class="flex flex-center max900">
                 
-                <div class="col-md6">
+               <!--  <div class="col-md6">
                     <div class="staff_card">
                         <div class="staff_wrap">
                             <div class="flex">
@@ -53,13 +53,14 @@ $slug = $page->post_name;
                         </div>
                     </div>
                 </div>
+-->
 
                 <div class="col-md6">
                     <div class="staff_card">
                         <div class="staff_wrap">
                             <div class="flex">
                                 <div class="col-lg4 img">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/img/noimage.jpg" alt="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/img/staff/01.jpg" alt="浜本 憲一">
                                 </div>
                                 <div class="col-lg8 text">
                                     <p class="position">社長</p>
@@ -86,19 +87,19 @@ $slug = $page->post_name;
                         </div>
                     </div>
                 </div>
-
+                
                 <div class="col-md6">
                     <div class="staff_card">
                         <div class="staff_wrap">
                             <div class="flex">
                                 <div class="col-lg4 img">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/img/noimage.jpg" alt="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/img/staff/02.jpg" alt="浜本 希美">
                                 </div>
                                 <div class="col-lg8 text">
-                                    <p class="position">設計部</p>
-                                    <p class="name">河村 美穂</p>
+                                    <p class="position">企画管理部　課長</p>
+                                    <p class="name">浜本 希美</p>
                                     <p class="license">
-                                    インテリアコーディネーター<br>二級福祉住環境コーディネーター
+                                    未生流華道師範、秘書検定二級
                                     </p>
                                 </div>
                                 <div class="col-12">
@@ -106,13 +107,43 @@ $slug = $page->post_name;
                                         <span>仕事について</span>
                                     </p>
                                     <p class="p">
-                                    この度産休を経て復帰をさせて頂きました。常に初心を忘れずに、また新しい知識の習得にも励んで行きたいと思っております。お客様には、ハマホームの良さ、ハマホームらしさのご提案をさせて頂きたいと思っております。宜しくお願い致します！
+                                    他の社員のみなさんに助けていただきながら仕事をしています。知らない事、分からない事と聞いてもイヤな顔をせず答えてくれるみんなに感謝しています。浜本建設のみんなの暖かい気持ちを力にして、お客様にもこのハートが伝わるように努力したいです。
                                     </p>
                                     <p class="h4">
                                         <span>プライベートについて</span>
                                     </p>
                                     <p class="p">
-                                    子供が一人増え、二人の子育てを自分なりに頑張っています！『ものより思い出♪』をモットーに、仕事とプライベート、メリハリをつけて毎日を楽しく過ごしていきたいです！！
+                                    仕事や子供を通して、様々な方と巡り合えることが幸せです。その人の生き方や考え方、お料理や趣味など真似したいなぁ…と勉強できる機会があることが幸せです。行動派ではありませんが、自分のできる範囲で、やりたい！と思ったことは実践していきたいです。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md6">
+                    <div class="staff_card">
+                        <div class="staff_wrap">
+                            <div class="flex">
+                                <div class="col-lg4 img">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/img/staff/03.jpg" alt="角井 美治">
+                                </div>
+                                <div class="col-lg8 text">
+                                    <p class="position">事務</p>
+                                    <p class="name">角井 美治</p>
+                                </div>
+                                <div class="col-12">
+                                    <p class="h4">
+                                        <span>仕事について</span>
+                                    </p>
+                                    <p class="p">
+                                    今、出来る事は何か、と考えながら職場のみなさまの協力のもと仕事をさせていただいております。浜本建設の明るい窓口になれるよう頑張っていきます。
+                                    </p>
+                                    <p class="h4">
+                                        <span>プライベートについて</span>
+                                    </p>
+                                    <p class="p">
+                                    心と体が柔軟になる、呼吸法を中心としたヨガを続けています。たまにカンフー、たまにダンスと軽やかに過ごしています。
                                     </p>
                                 </div>
                             </div>
@@ -125,7 +156,7 @@ $slug = $page->post_name;
                         <div class="staff_wrap">
                             <div class="flex">
                                 <div class="col-lg4 img">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/img/noimage.jpg" alt="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/img/staff/04.jpg" alt="">
                                 </div>
                                 <div class="col-lg8 text">
                                     <p class="position">工事部　課長</p>
@@ -155,7 +186,7 @@ $slug = $page->post_name;
                         <div class="staff_wrap">
                             <div class="flex">
                                 <div class="col-lg4 img">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/img/noimage.jpg" alt="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/img/staff/05.jpg" alt="鰐渕 泰成">
                                 </div>
                                 <div class="col-lg8 text">
                                     <p class="position">工事部</p>
@@ -166,7 +197,7 @@ $slug = $page->post_name;
                                         <span>仕事について</span>
                                     </p>
                                     <p class="p">
-                                    入社したばかりで分からない事ばかりですが、お客様に喜んでもらえるように、材料を選んで加工することにやりがいを感じます。良いものを仕入れて加工できるよう、知識を深めていきたいです。
+                                    お客様に喜んでもらえるように、材料を選んで加工することにやりがいを感じます。良いものを仕入れて加工できるよう、知識を深めていきたいです。
                                     </p>
                                     <p class="h4">
                                         <span>プライベートについて</span>
@@ -179,7 +210,42 @@ $slug = $page->post_name;
                         </div>
                     </div>
                 </div>
+                
+                <div class="col-md6">
+                    <div class="staff_card">
+                        <div class="staff_wrap">
+                            <div class="flex">
+                                <div class="col-lg4 img">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/img/staff/06.jpg" alt="河村 美穂">
+                                </div>
+                                <div class="col-lg8 text">
+                                    <p class="position">設計部</p>
+                                    <p class="name">河村 美穂</p>
+                                    <p class="license">
+                                    インテリアコーディネーター<br>二級福祉住環境コーディネーター
+                                    </p>
+                                </div>
+                                <div class="col-12">
+                                    <p class="h4">
+                                        <span>仕事について</span>
+                                    </p>
+                                    <p class="p">
+                                    HPを見て下さりありがとうございます。常に初心を忘れずに、また新しい知識の習得にも励んで行きたいと思っております。お客様には、ハマホームの良さ、ハマホームらしさのご提案をさせて頂きたいと思っております。宜しくお願い致します！
+                                    </p>
+                                    <p class="h4">
+                                        <span>プライベートについて</span>
+                                    </p>
+                                    <p class="p">
+                                    二人の子育てを自分なりに頑張っています！『ものより思い出♪』をモットーに、仕事とプライベート、メリハリをつけて毎日を楽しく過ごしていきたいです！！
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
+
+                <!--
                 <div class="col-md6">
                     <div class="staff_card">
                         <div class="staff_wrap">
@@ -212,7 +278,9 @@ $slug = $page->post_name;
                         </div>
                     </div>
                 </div>
+-->
 
+<!--
                 <div class="col-md6">
                     <div class="staff_card">
                         <div class="staff_wrap">
@@ -242,39 +310,7 @@ $slug = $page->post_name;
                         </div>
                     </div>
                 </div>
-
-                <div class="col-md6">
-                    <div class="staff_card">
-                        <div class="staff_wrap">
-                            <div class="flex">
-                                <div class="col-lg4 img">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/img/noimage.jpg" alt="">
-                                </div>
-                                <div class="col-lg8 text">
-                                    <p class="position">企画管理部　課長</p>
-                                    <p class="name">浜本 希美</p>
-                                    <p class="license">
-                                    未生流華道師範、秘書検定二級
-                                    </p>
-                                </div>
-                                <div class="col-12">
-                                    <p class="h4">
-                                        <span>仕事について</span>
-                                    </p>
-                                    <p class="p">
-                                    他の社員のみなさんに助けていただきながら仕事をしています。知らない事、分からない事と聞いてもイヤな顔をせず答えてくれるみんなに感謝しています。浜本建設のみんなの暖かい気持ちを力にして、お客様にもこのハートが伝わるように努力したいです。
-                                    </p>
-                                    <p class="h4">
-                                        <span>プライベートについて</span>
-                                    </p>
-                                    <p class="p">
-                                    仕事や子供を通して、様々な方と巡り合えることが幸せです。その人の生き方や考え方、お料理や趣味など真似したいなぁ…と勉強できる機会があることが幸せです。行動派ではありませんが、自分のできる範囲で、やりたい！と思ったことは実践していきたいです。
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+-->
 
             </div>
 
